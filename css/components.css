@@ -1,0 +1,189 @@
+/* Botões Gerais */
+.btn-contato {
+    border: 2px solid var(--cor-primaria);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.btn-contato:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco) !important;
+}
+
+.link-simples {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--cor-ouro);
+}
+
+/* Cards (Agenda) */
+.grid-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--cor-destaque);
+    padding: 40px 20px;
+    width: 300px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card:hover {
+    border-color: var(--cor-ouro);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(78, 52, 46, 0.1);
+}
+
+.card.destaque {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(78, 52, 46, 0.2);
+}
+
+.card.destaque h3, .card.destaque p {
+    color: var(--cor-branco);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+}
+
+.icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* WhatsApp Flutuante */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all 0.3s;
+    font-family: sans-serif;
+    animation: pulso 2s infinite;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-5px);
+}
+
+@keyframes pulso {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- ESTILO DOS ÍCONES FONT AWESOME --- */
+
+/* Todos os ícones gerais */
+i {
+    transition: transform 0.3s;
+}
+
+/* Ícones dentro dos círculos (Home e Contato) */
+.circulo-icone i, 
+.icon-box i {
+    color: var(--cor-ouro); /* Ficam Dourados */
+    font-size: 1.5rem;      /* Tamanho bom */
+}
+
+/* Ícones de Mídias Sociais */
+.fa-instagram { color: #E1306C; }
+.fa-facebook { color: #3b5998; }
+.fa-youtube { color: #FF0000; }
+
+/* Efeito ao passar o mouse (Pulo) */
+.item-icone:hover i,
+.card-info:hover i {
+    transform: scale(1.2); /* Aumenta um pouquinho */
+}
+
+/* Ícones da Agenda (Relógio e Calendário) */
+.culto-item i {
+    color: var(--cor-primaria);
+    margin-right: 8px;
+}
+
+/* =========================================
+   ÍCONES DE REDES SOCIAIS (REDONDOS E GRANDES)
+   ========================================= */
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espaço entre eles */
+    margin-top: 15px;
+    align-items: center;
+}
+
+/* O Círculo em volta do ícone */
+.social-icons a {
+    width: 50px;           /* Largura do círculo */
+    height: 50px;          /* Altura do círculo */
+    display: flex;
+    align-items: center;   /* Centraliza vertical */
+    justify-content: center; /* Centraliza horizontal */
+    background-color: white; /* Fundo branco limpo */
+    border-radius: 50%;    /* Deixa perfeitamente redondo */
+    text-decoration: none;
+    font-size: 1.5rem;     /* Tamanho do ícone dentro do círculo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra elegante */
+    transition: all 0.3s ease; /* Animação suave */
+    border: 1px solid #eee;
+}
+
+/* Cores das Marcas (Específicas) */
+/* Facebook */
+.social-icons a:nth-child(1) { 
+    color: #3b5998; 
+}
+
+/* Instagram */
+.social-icons a:nth-child(2) { 
+    color: #E1306C;
+}
+
+/* Youtube */
+.social-icons a:nth-child(3) { 
+    color: #FF0000;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1); /* Sobe e aumenta um pouco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra cresce */
+}
+
+/* Ajuste Opcional: Se o fundo da seção for escuro (como no Footer) */
+footer .social-icons a {
+    background-color: rgba(255,255,255,0.1); /* Fundo transparente */
+    color: white; /* Ícone branco */
+    border: none;
+}
+
+footer .social-icons a:hover {
+    background-color: var(--cor-ouro); /* Fica dourado ao passar o mouse */
+    color: var(--cor-primaria);
+}

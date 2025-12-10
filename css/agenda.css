@@ -1,0 +1,285 @@
+/* --- 1. HERO PAGE (Capa) --- */
+.hero-page {
+    /* Base comum */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Ajuste de segurança para não ficar escondido atrás do menu */
+    margin-top: -85px; 
+}
+
+.hero-agenda {
+    background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.hero-overlay-page {
+    background: linear-gradient(rgba(78, 52, 46, 0.6), rgba(78, 52, 46, 0.95));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    /* AUMENTEI O PADDING PARA O MENU NÃO COBRIR O TÍTULO */
+    padding-top: 120px; 
+    padding-bottom: 40px;
+}
+
+.hero-overlay-page h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.tag-topo {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* --- 2. AGENDA SEMANAL (Correção com GRID) --- */
+.agenda-semanal {
+    padding: 80px 20px;
+    background-color: var(--cor-branco);
+}
+
+.cabecalho-agenda {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.barra-decorativa-center {
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-ouro);
+    margin: 15px auto 25px auto;
+}
+
+/* MUDANÇA: Usando GRID para alinhar perfeitamente */
+.grid-semana {
+    display: grid;
+    /* Cria colunas automáticas de no mínimo 260px */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dia-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.dia-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-ouro);
+}
+
+.dia-card.destaque-domingo {
+    border-top: 4px solid var(--cor-ouro);
+    background-color: #fffaf0; /* Um fundo levemente diferente */
+}
+
+.dia-label {
+    background-color: #f8f9fa;
+    color: var(--cor-primaria);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--fonte-titulos);
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee;
+}
+
+.dia-card.destaque-domingo .dia-label {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.lista-cultos {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.culto-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.hora {
+    background: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    min-width: 60px; /* Garante que o horário não quebre */
+    text-align: center;
+}
+
+.detalhe-culto {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe-culto strong {
+    color: #333;
+    font-size: 1rem;
+}
+
+.detalhe-culto small {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* --- 3. EVENTOS ESPECIAIS --- */
+.eventos-especiais {
+    padding: 80px 20px;
+    background-color: var(--cor-primaria);
+    text-align: center;
+}
+
+.grid-eventos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-evento {
+    background: white;
+    width: 320px; /* Largura fixa segura */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card-evento:hover {
+    transform: translateY(-10px);
+}
+
+.img-evento {
+    height: 180px;
+    position: relative;
+}
+
+.img-evento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.data-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.data-badge .dia {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--cor-primaria);
+    line-height: 1;
+}
+
+.data-badge .mes {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--cor-ouro);
+    text-transform: uppercase;
+}
+
+.info-evento {
+    padding: 20px;
+}
+
+.tag-evento {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.info-evento h3 {
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-evento p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.btn-evento {
+    display: block;
+    text-align: center;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-evento:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* Responsividade Ajustada */
+@media (max-width: 768px) {
+    .hero-page {
+        height: 50vh; /* Menor no celular */
+    }
+    .hero-overlay-page h2 {
+        font-size: 2.5rem;
+    }
+    .grid-semana {
+        grid-template-columns: 1fr; /* Uma coluna só no celular */
+    }
+    .dia-card {
+        width: 100%; /* Ocupa a largura total */
+    }
+    .card-evento {
+        width: 100%;
+    }
+}

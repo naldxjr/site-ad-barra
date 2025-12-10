@@ -1,0 +1,189 @@
+/* --- 1. HERO PAGE (Reutilizando a base, mudando a foto) --- */
+.hero-page {
+    /* Base comum para todas as páginas internas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -85px;
+}
+
+.hero-ministerios {
+    /* Foto específica de Ministérios */
+    background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.hero-overlay-page {
+    background: linear-gradient(rgba(78, 52, 46, 0.5), rgba(78, 52, 46, 0.9));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-overlay-page h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.tag-topo {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* --- 2. GRID DE CARDS (Moderno) --- */
+.galeria-ministerios {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+/* O Poder do Grid: Cria colunas automáticas */
+.grid-cards-moderno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card-min {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-min:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(78, 52, 46, 0.15);
+}
+
+/* Imagem do Card */
+.card-img {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Zoom suave na imagem */
+.card-min:hover .card-img img {
+    transform: scale(1.1);
+}
+
+.categoria-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--cor-primaria);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Corpo do Card */
+.card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz cards terem mesma altura */
+}
+
+.card-body h3 {
+    color: var(--cor-primaria);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    flex-grow: 1; /* Empurra o rodapé para baixo */
+}
+
+.info-extra {
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+/* --- 3. BANNER VOLUNTÁRIO --- */
+.banner-voluntario {
+    background: linear-gradient(rgba(14, 42, 71, 0.9), rgba(14, 42, 71, 0.9)), 
+                url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.conteudo-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-ouro);
+}
+
+.conteudo-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-dourado {
+    display: inline-block;
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn-dourado:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}

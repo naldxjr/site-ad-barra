@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - AD Barra de Santa Rosa</title>
+    <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="container-menu">
+            <div class="logo">
+                <img src="img/LOGO-AD.png" alt="Logo AD Barra de Santa Rosa">
+                <div class="texto-logo">
+                    <h1>AD Barra</h1>
+                    <span>Barra de Santa Rosa</span>
+                </div>
+            </div>
+            
+            <nav id="nav-principal">
+                <ul class="menu-lista">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="ministerios.html">Ministérios</a></li>
+                    <li><a href="agenda.html" style="color: var(--cor-ouro);">Agenda</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="contribua.html" class="btn-contato">Contribua</a></li>
+                </ul>
+            </nav>
+
+            <button id="btn-mobile" class="btn-mobile">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-page hero-agenda">
+        <div class="hero-overlay-page">
+            <span class="tag-topo">Programação</span>
+            <h2>Agenda do Reino</h2>
+            <p>Não deixe de congregar, como é costume de alguns.</p>
+        </div>
+    </section>
+
+    <section class="agenda-semanal">
+        <div class="container">
+            <div class="cabecalho-agenda">
+                <h2 class="titulo-elegante">Semana de Cultos</h2>
+                <div class="barra-decorativa-center"></div>
+            </div>
+
+            <div class="grid-semana">
+                <div class="dia-card destaque-domingo">
+                    <div class="dia-label">DOMINGO</div>
+                    <div class="lista-cultos">
+                        <div class="culto-item">
+                            <span class="hora">09:00</span>
+                            <div class="detalhe-culto">
+                                <strong>EBD</strong>
+                                <small>Escola Bíblica</small>
+                            </div>
+                        </div>
+                        <div class="culto-item principal">
+                            <span class="hora">19:00</span>
+                            <div class="detalhe-culto">
+                                <strong>Culto da Família</strong>
+                                <small>Celebração</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia-card">
+                    <div class="dia-label">TERÇA-FEIRA</div>
+                    <div class="lista-cultos">
+                        <div class="culto-item">
+                            <span class="hora">19:30</span>
+                            <div class="detalhe-culto">
+                                <strong>Culto de Ensino</strong>
+                                <small>Doutrina</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia-card">
+                    <div class="dia-label">QUINTA-FEIRA</div>
+                    <div class="lista-cultos">
+                        <div class="culto-item">
+                            <span class="hora">19:30</span>
+                            <div class="detalhe-culto">
+                                <strong>Círculo de Oração</strong>
+                                <small>Intercessão</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eventos-especiais">
+        <div class="container">
+            <h2 class="titulo-elegante" style="color: white;">Próximos Eventos</h2>
+            <div class="grid-eventos">
+                <div class="card-evento">
+                    <div class="img-evento">
+                        <img src="https://images.unsplash.com/photo-1511553677255-ba939e5537e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Santa Ceia">
+                        <div class="data-badge"><span class="dia">10</span><span class="mes">AGO</span></div>
+                    </div>
+                    <div class="info-evento">
+                        <span class="tag-evento">Comunhão</span>
+                        <h3>Grande Santa Ceia</h3>
+                        <p>Venha participar da mesa do Senhor.</p>
+                        <a href="#" class="btn-evento">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Assembleia de Deus - Barra de Santa Rosa / PB</p>
+    </footer>
+    <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+    <script src="js/script.js"></script>
+</body>
+</html>

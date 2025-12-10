@@ -1,0 +1,42 @@
+:root {
+    /* Paleta Terra e Graça */
+    --cor-primaria: #4E342E;   /* Marrom Café */
+    --cor-secundaria: #8D6E63; /* Marrom Médio */
+    --cor-destaque: #D7CCC8;   /* Bege Claro */
+    --cor-ouro: #CCA06D;       /* Dourado */
+    --cor-texto: #3E2723;      /* Texto Escuro */
+    --cor-branco: #ffffff;
+    
+    /* Fontes */
+    --fonte-titulos: 'Playfair Display', serif;
+    --fonte-texto: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: #FAFAFA;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+}
+
+.titulo-elegante {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: var(--cor-secundaria);
+    margin-bottom: 50px;
+    font-style: italic;
+}

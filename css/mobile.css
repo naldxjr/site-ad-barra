@@ -1,0 +1,221 @@
+/* =========================================
+   MOBILE FIX 4.0 (MENU LISTA + HERO AJUSTADO)
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    /* --- 1. CABEÇALHO E BOTÃO --- */
+    .header-principal {
+        position: relative; /* Importante para o menu se posicionar em relação a ele */
+        padding: 10px 0;
+    }
+
+    .container-menu {
+        padding: 0 20px;
+        /* Garante que o botão fique na direita e logo na esquerda */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Botão Hambúrguer Simples e Visível */
+    .btn-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002; /* Acima do menu */
+        margin-left: auto; /* Força ir para a direita se precisar */
+    }
+
+    .linha {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--cor-primaria);
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Animação do X */
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* --- 2. O MENU (LISTINHA DESCENDO) --- */
+    #nav-principal {
+        display: block;
+        position: absolute; /* Flutua embaixo do header */
+        top: 100%; /* Começa exatamente onde o header termina */
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-primaria); /* Fundo Azul Escuro */
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        padding: 0;
+        z-index: 1000;
+        
+        /* Efeito de abrir/fechar (Slide) */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        border-bottom: 4px solid var(--cor-ouro);
+    }
+
+    /* Quando ativo, a altura aumenta revelando o conteúdo */
+    #nav-principal.active {
+        max-height: 500px; /* Altura suficiente para os links */
+    }
+
+    .menu-lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        margin: 0;
+        gap: 0; /* Remove gap para usar padding nos links */
+    }
+
+    .menu-lista li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .menu-lista a {
+        display: block;
+        padding: 15px 0;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .menu-lista a:hover {
+        background-color: rgba(0,0,0,0.2);
+        color: var(--cor-ouro);
+    }
+
+    /* Botão Contribua no Mobile */
+    .btn-contato {
+        margin-top: 10px;
+        display: inline-block !important;
+        background-color: var(--cor-ouro) !important;
+        color: var(--cor-primaria) !important;
+        border: none !important;
+        padding: 10px 30px !important;
+    }
+
+    /* --- 3. CORREÇÃO DOS HEROS (CAPAS) --- */
+    
+    .hero-master, .hero-page {
+        /* Remove a altura fixa de tela cheia que fica feia no mobile */
+        height: auto !important;
+        min-height: auto !important;
+        
+        /* Adiciona respiro em cima e embaixo */
+        padding: 60px 20px;
+        
+        /* Corrige imagem de fundo */
+        background-attachment: scroll !important; /* Parallax off no mobile */
+        background-position: center center !important;
+        margin-top: 0 !important; /* Remove margem negativa */
+    }
+
+    /* Ajuste dos textos da Capa */
+    .hero-overlay, .hero-overlay-page {
+        background: rgba(14, 42, 71, 0.7); /* Escurece um pouco mais pra ler melhor */
+        border-radius: 10px; /* Um leve arredondamento */
+        padding: 30px 15px; /* Espaço interno */
+    }
+
+    .hero-overlay h1, .hero-overlay-page h2 {
+        font-size: 1.8rem; /* Fonte menor para não quebrar */
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-overlay p, .hero-overlay-page p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Botões da Capa um embaixo do outro */
+    .hero-botoes {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-hero-principal, .btn-hero-outline {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    /* --- 4. AJUSTES DE LAYOUT GERAL --- */
+    
+    /* Remove margens negativas que quebram o layout */
+    .acesso-rapido, .hero-master {
+        margin-top: 0 !important;
+        top: 0 !important;
+    }
+
+    /* Transforma tudo em coluna única */
+    .grid-icones, 
+    .container-split, 
+    .container-split-video, 
+    .grid-semana, 
+    .grid-contato-moderno,
+    .layout-doacao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-icone {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Agenda Ajustes */
+    .culto-item {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .dia-card, .card-evento, .card-min, .card-lider {
+        width: 100% !important;
+    }
+
+    /* Texto Justificado ou Esquerda para facilitar leitura */
+    .texto-historia, .texto-mensagem {
+        text-align: left;
+    }
+
+    .video-wrapper, .moldura-foto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajuste Contato */
+    .coluna-info, .coluna-form {
+        width: 100%;
+    }
+}
+
+/* Desktop: esconde o botão */
+@media (min-width: 851px) {
+    .btn-mobile {
+        display: none !important;
+    }
+}

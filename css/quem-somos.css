@@ -1,0 +1,236 @@
+/* =========================================
+   QUEM SOMOS 2.0 - ESTILO RENOVADO
+   ========================================= */
+
+/* --- 1. HERO PAGE (Capa Parallax Menor que a Home) --- */
+.hero-page {
+    /* Foto de fundo: Pessoas reunidas ou fachada */
+    background: url('https://images.unsplash.com/photo-1507692049790-de58293a4697?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* O segredo do efeito Parallax */
+    height: 60vh; /* Ocupa 60% da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -85px; /* Compensa o menu transparente */
+}
+
+.hero-overlay-page {
+    background: linear-gradient(rgba(78, 52, 46, 0.5), rgba(78, 52, 46, 0.9));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-overlay-page h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.tag-topo {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* --- 2. HISTÓRIA --- */
+.secao-historia {
+    padding: 80px 20px;
+    background-color: var(--cor-branco);
+}
+
+.container-split {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.barra-decorativa {
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-ouro);
+    margin: 15px 0 25px 0;
+}
+
+.texto-historia p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.citacao-texto {
+    border-left: 4px solid var(--cor-primaria);
+    padding-left: 20px;
+    font-family: var(--fonte-titulos);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-top: 30px;
+}
+
+.moldura-foto {
+    position: relative;
+    padding: 10px;
+    border: 2px solid var(--cor-ouro); /* Moldura dourada fina */
+    border-radius: 5px;
+}
+
+.imagem-historia img {
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- 3. MVV (Missão, Visão, Valores) --- */
+.secao-mvv {
+    background-color: #f4f6f7;
+    padding: 80px 20px;
+    margin-top: 40px;
+}
+
+.grid-mvv {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-mvv {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border-top: 5px solid transparent;
+}
+
+.card-mvv:hover {
+    transform: translateY(-10px);
+    border-top: 5px solid var(--cor-ouro);
+}
+
+.card-mvv.destaque-mvv {
+    background-color: var(--cor-primaria);
+    color: white;
+    transform: scale(1.05); /* Um pouco maior */
+}
+
+.card-mvv.destaque-mvv h3 {
+    color: white;
+}
+
+.card-mvv.destaque-mvv p {
+    color: #ddd;
+}
+
+.icone-mvv {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card-mvv h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* --- 4. LIDERANÇA --- */
+.secao-lideranca {
+    padding: 80px 20px;
+    background-color: var(--cor-branco);
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grid-lideres {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-lider {
+    width: 250px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card-lider:hover {
+    transform: translateY(-5px);
+}
+
+.foto-container {
+    height: 280px; /* Foto retangular alta estilo revista */
+    overflow: hidden;
+    position: relative;
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Zoom suave na foto ao passar o mouse */
+.card-lider:hover .foto-container img {
+    transform: scale(1.1);
+}
+
+.info-lider {
+    padding: 20px;
+    border-bottom: 3px solid var(--cor-ouro);
+}
+
+.info-lider h3 {
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.info-lider p {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-split {
+        flex-direction: column;
+    }
+    .hero-overlay-page h2 {
+        font-size: 2.5rem;
+    }
+    .hero-page {
+        height: 50vh;
+    }
+}

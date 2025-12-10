@@ -1,0 +1,256 @@
+/* =========================================
+   HOME 2.0 - ESTILO RENOVADO
+   ========================================= */
+
+/* --- 1. HERO MASTER (Capa de Cinema) --- */
+.hero-master {
+    /* Imagem de fundo de alta qualidade (Igreja cheia ou adorando) */
+    background: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax (Imagem parada ao rolar) */
+    height: 90vh; /* Ocupa 90% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -85px; /* Puxa para cima para ficar atrás do menu transparente */
+}
+
+/* Camada escura para o texto aparecer bem */
+.hero-overlay {
+    background: linear-gradient(rgba(14, 42, 71, 0.4), rgba(14, 42, 71, 0.9));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    padding-top: 80px; /* Compensar o menu */
+}
+
+.hero-tag {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: descer 1s ease;
+}
+
+.hero-overlay h1 {
+    font-size: 4rem; /* Título gigante */
+    margin-bottom: 15px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: descer 1.2s ease;
+}
+
+.hero-overlay p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: descer 1.4s ease;
+}
+
+/* Animação suave de entrada */
+@keyframes descer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botões da Capa */
+.hero-botoes {
+    display: flex;
+    gap: 20px;
+    animation: descer 1.6s ease;
+}
+
+.btn-hero-principal {
+    background-color: #e74c3c; /* Vermelho YouTube */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.4);
+}
+
+.btn-hero-principal:hover {
+    transform: translateY(-5px);
+    background-color: #c0392b;
+}
+
+.btn-hero-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.btn-hero-outline:hover {
+    background-color: white;
+    color: var(--cor-primaria);
+}
+
+/* --- 2. ACESSO RÁPIDO (Ícones) --- */
+.acesso-rapido {
+    padding: 60px 20px;
+    background-color: var(--cor-branco);
+    margin-top: -50px; /* Sobe um pouco para cima da capa */
+    position: relative;
+    z-index: 10;
+}
+
+.grid-icones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item-icone {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.item-icone:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--cor-ouro);
+}
+
+.circulo-icone {
+    width: 60px;
+    height: 60px;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border: 1px solid #eee;
+}
+
+.item-icone h3 {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-icone p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- 3. SEÇÃO MENSAGEM (Vídeo) --- */
+.secao-mensagem {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.container-split-video {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.video-wrapper {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 5px solid white;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    display: block;
+}
+
+.texto-mensagem {
+    flex: 1;
+}
+
+.tag-pequena {
+    color: var(--cor-ouro);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.texto-mensagem p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- 4. VERSÍCULO (Visual Parallax) --- */
+.versiculo-parallax {
+    background: linear-gradient(rgba(78, 52, 46, 0.9), rgba(78, 52, 46, 0.8)), 
+                url('https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.icone-aspas {
+    font-family: serif;
+    font-size: 5rem;
+    color: var(--cor-ouro);
+    opacity: 0.5;
+    display: block;
+    line-height: 1;
+    margin-bottom: -20px;
+}
+
+#versiculo-texto {
+    font-family: var(--fonte-titulos);
+    font-size: 2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#versiculo-ref {
+    color: var(--cor-ouro);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-overlay h1 { font-size: 2.5rem; }
+    .container-split-video { flex-direction: column; }
+    .hero-botoes { flex-direction: column; width: 100%; }
+    .btn-hero-principal, .btn-hero-outline { width: 100%; justify-content: center; }
+}
