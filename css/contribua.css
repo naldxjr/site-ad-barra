@@ -1,9 +1,8 @@
-/* --- 1. HERO PAGE (Capa Parallax) --- */
 .hero-page {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +15,7 @@
 }
 
 .hero-overlay-page {
-    background: linear-gradient(rgba(78, 52, 46, 0.6), rgba(78, 52, 46, 0.95));
+    background: linear-gradient(135deg, rgba(14, 42, 71, 0.7), rgba(14, 42, 71, 0.95));
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,20 +24,20 @@
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .hero-overlay-page h2 {
     font-size: 3.5rem;
-    margin-bottom: 15px;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .tag-topo {
     background-color: var(--cor-ouro);
     color: var(--cor-primaria);
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 6px 18px;
+    border-radius: 30px;
     font-weight: bold;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -46,7 +45,13 @@
     letter-spacing: 2px;
 }
 
-/* --- 2. LAYOUT DOACAO (Flexbox Avançado) --- */
+.hero-overlay-page p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 .secao-doacao {
     padding: 80px 20px;
     background-color: #f8f9fa;
@@ -56,468 +61,244 @@
     display: flex;
     justify-content: center;
     gap: 60px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    /* Alinha no topo */
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
 }
 
-/* COLUNA ESQUERDA: O Cartão PIX */
-.coluna-pix {
+.coluna-destaque {
     flex: 1;
     min-width: 300px;
-    max-width: 450px;
 }
 
 .cartao-pix-premium {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
     overflow: hidden;
-    border: 1px solid #eee;
-    position: relative;
     text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .header-pix {
     background: var(--cor-primaria);
     color: white;
-    padding: 30px 20px;
-    position: relative;
+    padding: 40px 30px;
 }
 
-.badge-pix {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #32bcad;
-    /* Verde PIX */
-    color: white;
-    font-size: 0.7rem;
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
+.icone-pix {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-ouro);
 }
 
 .header-pix h3 {
-    margin: 0;
     font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 .header-pix p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.8;
 }
 
 .corpo-pix {
-    padding: 30px;
+    padding: 40px 30px;
 }
 
-.qr-container {
+.qr-code-box {
     width: 180px;
     height: 180px;
-    margin: 0 auto 20px;
-    border: 4px solid var(--cor-ouro);
+    margin: 0 auto 30px;
+    padding: 10px;
+    border: 2px solid #f0f0f0;
     border-radius: 10px;
-    padding: 5px;
 }
 
-.qr-container img {
+.qr-code-box img {
     width: 100%;
     height: 100%;
 }
 
-.chave-container small {
+.label-chave {
     display: block;
+    font-size: 0.8rem;
     color: #888;
-    margin-bottom: 5px;
-    font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.input-fake {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
+.input-copia {
+    background-color: #f4f6f8;
+    border: 1px solid #e0e0e0;
     border-radius: 50px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.input-fake span {
+.input-copia span {
     font-family: monospace;
     font-size: 1.1rem;
     color: #333;
 }
 
-.btn-copiar {
-    background: var(--cor-primaria);
-    color: var(--cor-ouro);
+#btn-copiar-pix {
+    background: var(--cor-ouro);
     border: none;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--cor-primaria);
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-copiar:hover {
-    background: #333;
-}
-
-.footer-pix {
-    background: #fcfcfc;
-    border-top: 1px solid #eee;
-    padding: 15px;
+    transition: transform 0.2s;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 0.8rem;
-    color: #666;
+    justify-content: center;
 }
 
-.logo-pix-mini {
-    height: 20px;
+#btn-copiar-pix:hover {
+    transform: scale(1.1);
 }
 
-/* COLUNA DIREITA: Bancos */
 .coluna-bancos {
     flex: 1;
     min-width: 300px;
-    max-width: 450px;
-    padding-top: 20px;
 }
 
 .titulo-bancos {
+    font-size: 1.8rem;
     color: var(--cor-primaria);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    font-family: var(--fonte-titulos);
     border-left: 4px solid var(--cor-ouro);
     padding-left: 15px;
 }
 
-.desc-bancos {
-    color: #666;
-    margin-bottom: 30px;
+.lista-bancos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .item-banco {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid transparent;
-    transition: border 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
 }
 
 .item-banco:hover {
+    transform: translateX(10px);
     border-color: var(--cor-ouro);
 }
 
-.logo-banco-wrapper {
+.banco-icon {
     width: 60px;
     height: 60px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f9f9f9;
-    border-radius: 50%;
     padding: 10px;
 }
 
-.logo-banco-wrapper img {
+.banco-icon img {
     max-width: 100%;
-    max-height: 100%;
 }
 
-.dados-banco h4 {
+.banco-info h4 {
     margin: 0 0 5px;
     color: var(--cor-primaria);
-}
-
-.dados-banco p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* --- 3. TRANSPARÊNCIA (Dark) --- */
-.transparencia-dark {
-    background-color: var(--cor-primaria);
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
-}
-
-.transparencia-dark h2 {
-    color: var(--cor-ouro);
-    margin-bottom: 40px;
-}
-
-.grid-destinos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.item-destino {
-    text-align: center;
-}
-
-.icone-destino {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.item-destino p {
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* =========================================
-   TRANSPARÊNCIA DETALHADA
-   ========================================= */
-
-.secao-destino {
-    padding: 80px 20px;
-    background-color: #fff;
-}
-
-.cabecalho-destino {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 60px;
-}
-
-.cabecalho-destino p {
-    color: #666;
     font-size: 1.1rem;
 }
 
-/* GRID DE CARDS */
-.grid-detalhes {
-    display: grid;
-    /* Cria 2 colunas grandes */
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+.banco-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.secao-transparencia {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.cabecalho-transparencia {
+    text-align: center;
     margin-bottom: 60px;
 }
 
+.barra-decorativa-center {
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-ouro);
+    margin: 15px auto 25px auto;
+}
+
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .card-destino {
-    display: flex;
-    gap: 20px;
+    text-align: center;
     padding: 30px;
-    background: #f9f9f9;
     border-radius: 12px;
-    border-left: 5px solid var(--cor-ouro);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
 }
 
 .card-destino:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    background: white;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
 }
 
-.icone-destaque {
-    min-width: 60px;
-    height: 60px;
-    background-color: rgba(204, 160, 109, 0.15);
-    /* Dourado bem clarinho */
-    color: var(--cor-primaria);
-    font-size: 1.5rem;
+.icon-destino {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(204, 160, 109, 0.1);
+    color: var(--cor-ouro);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
 }
 
-.texto-destino h3 {
+.card-destino h4 {
     color: var(--cor-primaria);
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    font-size: 1.3rem;
 }
 
-.texto-destino p {
+.card-destino p {
+    color: #666;
     font-size: 0.95rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-.lista-mini {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.lista-mini li {
-    font-size: 0.85rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.lista-mini i {
-    color: #2ecc71;
-    /* Verde Check */
-    margin-right: 5px;
-}
-
-/* GRÁFICO DE BARRA (VISUAL) */
-.box-distribuicao {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
-    text-align: center;
-}
-
-.box-distribuicao h3 {
-    color: var(--cor-primaria);
-    margin-bottom: 25px;
-}
-
-.grafico-barra {
-    height: 30px;
-    width: 100%;
-    background: #eee;
-    border-radius: 15px;
-    display: flex;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.parte {
-    height: 100%;
-    transition: width 1s;
-    position: relative;
-    cursor: help;
-}
-
-/* Tooltip (Texto que aparece ao passar o mouse na barra) */
-.parte .tooltip {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 120%;
-    /* Fica acima da barra */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.parte:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Cores das Partes */
-.manutencao {
-    background-color: var(--cor-primaria);
-}
-
-.social {
-    background-color: #27ae60;
-}
-
-.missoes {
-    background-color: var(--cor-ouro);
-}
-
-.ensino {
-    background-color: #3498db;
-}
-
-/* Legenda */
-.legenda-grafico {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.item-legenda {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    color: #555;
-    font-weight: bold;
-}
-
-.cor-bola {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: block;
-}
-
-.c-manutencao {
-    background-color: var(--cor-primaria);
-}
-
-.c-social {
-    background-color: #27ae60;
-}
-
-.c-missoes {
-    background-color: var(--cor-ouro);
-}
-
-.c-ensino {
-    background-color: #3498db;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .grid-detalhes {
-        grid-template-columns: 1fr;
-        /* 1 coluna no celular */
-    }
-
-    .card-destino {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .lista-mini {
-        text-align: left;
-        /* Lista continua alinhada a esquerda pra ficar bonito */
-        display: inline-block;
-    }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .layout-doacao {
         flex-direction: column;
-        align-items: center;
+        gap: 40px;
     }
-
-    .coluna-pix,
-    .coluna-bancos {
-        width: 100%;
+    
+    .hero-overlay-page h2 {
+        font-size: 2.5rem;
     }
 }

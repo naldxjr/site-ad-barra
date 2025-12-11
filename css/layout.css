@@ -81,5 +81,14 @@ footer {
     padding: 40px;
     font-size: 0.9rem;
     border-top: 5px solid var(--cor-ouro);
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+.rodape {
+    background-color: #242323;
+    color: var(--cor-destaque);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-top: 2px solid var(--cor-ouro);
 }

@@ -1,10 +1,8 @@
-/* --- 1. HERO PAGE (Reutilizando a base, mudando a foto) --- */
 .hero-page {
-    /* Base comum para todas as páginas internas */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,12 +11,11 @@
 }
 
 .hero-ministerios {
-    /* Foto específica de Ministérios */
     background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
 }
 
 .hero-overlay-page {
-    background: linear-gradient(rgba(78, 52, 46, 0.5), rgba(78, 52, 46, 0.9));
+    background: linear-gradient(135deg, rgba(14, 42, 71, 0.7), rgba(14, 42, 71, 0.95));
     width: 100%;
     height: 100%;
     display: flex;
@@ -33,14 +30,14 @@
 .hero-overlay-page h2 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .tag-topo {
     background-color: var(--cor-ouro);
     color: var(--cor-primaria);
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 6px 18px;
+    border-radius: 30px;
     font-weight: bold;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -48,18 +45,24 @@
     letter-spacing: 2px;
 }
 
-/* --- 2. GRID DE CARDS (Moderno) --- */
+.hero-overlay-page p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 .galeria-ministerios {
     padding: 80px 20px;
     background-color: #f8f9fa;
 }
 
-/* O Poder do Grid: Cria colunas automáticas */
 .grid-cards-moderno {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card-min {
@@ -67,18 +70,17 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
     display: flex;
     flex-direction: column;
 }
 
 .card-min:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(78, 52, 46, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(14, 42, 71, 0.1);
 }
 
-/* Imagem do Card */
 .card-img {
     height: 220px;
     position: relative;
@@ -89,101 +91,124 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease;
 }
 
-/* Zoom suave na imagem */
 .card-min:hover .card-img img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .categoria-tag {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     color: var(--cor-primaria);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
 }
 
-/* Corpo do Card */
 .card-body {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz cards terem mesma altura */
+    flex-grow: 1;
 }
 
 .card-body h3 {
     color: var(--cor-primaria);
     font-size: 1.4rem;
     margin-bottom: 10px;
+    font-family: var(--fonte-titulos);
 }
 
 .card-body p {
     color: #666;
-    margin-bottom: 20px;
-    line-height: 1.5;
     font-size: 0.95rem;
-    flex-grow: 1; /* Empurra o rodapé para baixo */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .info-extra {
-    border-top: 1px dashed #eee;
+    border-top: 1px solid #f0f0f0;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    font-size: 0.85rem;
-    color: var(--cor-secundaria);
-    font-weight: bold;
+    gap: 8px;
 }
 
-/* --- 3. BANNER VOLUNTÁRIO --- */
+.info-extra span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.info-extra i {
+    color: var(--cor-ouro);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
 .banner-voluntario {
-    background: linear-gradient(rgba(14, 42, 71, 0.9), rgba(14, 42, 71, 0.9)), 
-                url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: var(--cor-primaria);
     color: white;
     text-align: center;
     padding: 80px 20px;
 }
 
+.conteudo-banner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .conteudo-banner h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: var(--cor-ouro);
+    color: white;
+    font-family: var(--fonte-titulos);
 }
 
 .conteudo-banner p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #ddd;
+    line-height: 1.6;
 }
 
 .btn-dourado {
     display: inline-block;
-    background-color: var(--cor-ouro);
+    background: var(--cor-ouro);
     color: var(--cor-primaria);
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 1px;
     transition: all 0.3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .btn-dourado:hover {
     background-color: white;
     transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .grid-cards-moderno {
+        grid-template-columns: 1fr;
+    }
+    .hero-overlay-page h2 {
+        font-size: 2.5rem;
+    }
 }

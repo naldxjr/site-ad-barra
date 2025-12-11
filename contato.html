@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - AD Barra de Santa Rosa</title>
-
     <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -21,19 +17,18 @@
     <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
-
 <body>
 
     <header class="header-principal">
         <div class="container-menu">
             <div class="logo">
-                <img src="img/LOGO-AD.png" alt="Logo AD Barra de Santa Rosa">
+                <img src="img/LOGO-AD.png" alt="Logo AD">
                 <div class="texto-logo">
                     <h1>AD Barra</h1>
                     <span>Barra de Santa Rosa</span>
                 </div>
             </div>
-
+            
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
@@ -56,118 +51,110 @@
     <section class="hero-page hero-contato">
         <div class="hero-overlay-page">
             <span class="tag-topo">Fale Conosco</span>
-            <h2>ESTAMOS AQUI POR VOCÊ</h2>
+            <h2>Estamos à Disposição</h2>
+            <p>Entre em contato para pedidos de oração, dúvidas ou visitas.</p>
         </div>
     </section>
 
     <section class="secao-contato">
         <div class="container">
-            <div class="grid-contato-moderno">
-
-                <div class="coluna-info">
-                    <h3 class="titulo-elegante">Canais de Atendimento</h3>
-                    <div class="card-info">
-                        <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="text-box">
-                            <h4>Visite-nos</h4>
-                            <p>Rua Principal, 123 - Centro</p>
+            
+            <div class="grid-contato">
+                
+                <div class="info-lateral">
+                    <h3 class="titulo-info">Canais de Atendimento</h3>
+                    <p class="desc-info">Nossa secretaria funciona de segunda a sexta, das 08h às 17h.</p>
+                    
+                    <div class="card-canal">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-texto">
+                            <h4>Localização</h4>
+                            <p>Rua Principal, 123 - Centro<br>Barra de Santa Rosa - PB</p>
                         </div>
                     </div>
-                    <div class="card-info">
-                        <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
-                        <div class="text-box">
-                            <h4>Ligue ou Zap</h4>
+
+                    <div class="card-canal">
+                        <div class="icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="info-texto">
+                            <h4>WhatsApp</h4>
                             <p>(83) 99999-9999</p>
                         </div>
                     </div>
-                    <div class="card-info">
-                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
-                        <div class="text-box">
+
+                    <div class="card-canal">
+                        <div class="icon-circle"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="info-texto">
                             <h4>E-mail</h4>
-                            <p>secretaria@adbarra.com.br</p>
+                            <p>contato@adbarra.com.br</p>
                         </div>
                     </div>
 
-                    <div class="social-area">
-                        <h4>Siga-nos:</h4>
+                    <div class="social-block">
+                        <h4>Redes Sociais</h4>
                         <div class="social-icons">
-                            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="coluna-form">
-                    <div class="form-wrapper">
-                        <h3>Envie uma Mensagem</h3>
-                        <form action="https://formspree.io/f/xgvgnrqj" method="POST">
+                <div class="form-area">
+                    <form id="form-contato" action="https://formspree.io/f/SEU_CODIGO" method="POST">
+                        <h3 class="titulo-form">Envie uma Mensagem</h3>
+                        
+                        <div class="grupo-input">
+                            <label>Nome Completo</label>
+                            <input type="text" name="nome" placeholder="Digite seu nome" required>
+                        </div>
 
-                            <div class="input-group">
-                                <label>Nome Completo</label>
-                                <input type="text" name="nome" placeholder="Ex: João da Silva" required>
+                        <div class="linha-dupla">
+                            <div class="grupo-input">
+                                <label>Telefone / WhatsApp</label>
+                                <input type="tel" name="telefone" placeholder="(83) 99999-9999" required>
                             </div>
-
-                            <div class="row-duplo">
-                                <div class="input-group">
-                                    <label>WhatsApp</label>
-                                    <input type="tel" name="whatsapp" placeholder="(83) 00000-0000" required>
-                                </div>
-                                <div class="input-group">
-                                    <label>Assunto</label>
-                                    <select name="assunto">
-                                        <option value="Oracao">Pedido de Oração</option>
-                                        <option value="Duvida">Dúvida</option>
-                                        <option value="Visita">Agendamento com Pastor</option>
-                                        <option value="Outros">Outros</option>
-                                    </select>
-                                </div>
+                            <div class="grupo-input">
+                                <label>Assunto</label>
+                                <select name="assunto">
+                                    <option value="Oracao">Pedido de Oração</option>
+                                    <option value="Visita">Agendar Visita</option>
+                                    <option value="Duvida">Dúvida</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div class="input-group">
-                                <label>Sua Mensagem</label>
-                                <textarea name="mensagem" rows="5" placeholder="Escreva aqui..." required></textarea>
-                            </div>
+                        <div class="grupo-input">
+                            <label>Mensagem</label>
+                            <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
 
-                            <button type="submit" class="btn-enviar-moderno">Enviar Agora</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="secao-localizacao">
-        <div class="container">
-            <div class="grid-mapa-premium">
-                
-                <div class="convite-visita">
-                    <span class="tag-pequena">Nossa Casa</span>
-                    <h2 class="titulo-elegante">Um Lugar de Refúgio no Coração da Cidade</h2>
-                    <p class="texto-destaque">
-                        Não somos apenas um endereço no mapa. A AD Barra é um espaço preparado por Deus para receber sua família com conforto, segurança e uma atmosfera de paz.
-                    </p>
-                    <p>
-                        Estamos localizados em um ponto estratégico, de fácil acesso. Venha tomar um café conosco antes do culto e sentir o acolhimento da nossa irmandade.
-                    </p>
-
-                </div>
-
-                <div class="mapa-frame">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15849.483643569209!2d-36.0567195!3d-6.7245161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ae706edb4bf1a7%3A0x49d4178d4b3ed8e9!2sIgreja%20Assembl%C3%A9ia%20De%20Deus%20Miss%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1765402831118!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <button type="submit" class="btn-enviar">Enviar Agora</button>
+                    </form>
                 </div>
 
             </div>
+
+            <div class="mapa-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.333973673321!2d-36.066667!3d-6.733333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a50a0000000001%3A0x0!2sBarra%20de%20Santa%20Rosa!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
         </div>
     </section>
 
     <footer>
-        <p>Assembleia de Deus - Barra de Santa Rosa / PB</p>
+        <p>IGREJA EVANGELICA ASSEMBLEIA DE DEUS EM BARRA DE SANTA ROSA - PB</p>
+        <p>© 2025 - Todos os Direitos Reservados</p>
     </footer>
-    <a href="https://wa.me/5583993644940" target="_blank" class="btn-whatsapp">
+
+    <div class="rodape">
+            <span>Desenvolvido por @nalldojr</span>
+    </div>
+    
+    <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
     </a>
+    
     <script src="js/script.js"></script>
 </body>
-
 </html>

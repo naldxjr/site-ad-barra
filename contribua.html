@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contribua - AD Barra de Santa Rosa</title>
-
     <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -21,19 +17,18 @@
     <link rel="stylesheet" href="css/contribua.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
-
 <body>
 
     <header class="header-principal">
         <div class="container-menu">
             <div class="logo">
-                <img src="img/LOGO-AD.png" alt="Logo AD Barra de Santa Rosa">
+                <img src="img/LOGO-AD.png" alt="Logo AD">
                 <div class="texto-logo">
                     <h1>AD Barra</h1>
                     <span>Barra de Santa Rosa</span>
                 </div>
             </div>
-
+            
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
@@ -41,7 +36,7 @@
                     <li><a href="ministerios.html">Ministérios</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="contato.html">Contato</a></li>
-                    <li><a href="contribua.html" class="btn-contato">Contribua</a></li>
+                    <li><a href="contribua.html" class="btn-contato" style="background-color: var(--cor-ouro); color: var(--cor-primaria);">Contribua</a></li>
                 </ul>
             </nav>
 
@@ -57,113 +52,108 @@
         <div class="hero-overlay-page">
             <span class="tag-topo">Dízimos e Ofertas</span>
             <h2>Generosidade</h2>
-            <p>"Cada um contribua segundo propôs no seu coração... <br>2 Coríntios 9:7-15"</p>
+            <p>"Cada um contribua segundo propôs no seu coração..." - 2 Corintios 9:7-15</p>
         </div>
     </section>
 
     <section class="secao-doacao">
         <div class="container">
             <div class="layout-doacao">
-                <div class="coluna-pix">
+                
+                <div class="coluna-destaque">
                     <div class="cartao-pix-premium">
                         <div class="header-pix">
-                            <span class="badge-pix">Recomendado</span>
+                            <i class="fa-brands fa-pix icone-pix"></i>
                             <h3>Faça um PIX</h3>
+                            <p>Use a chave abaixo para ofertar de forma rápida e segura.</p>
                         </div>
                         <div class="corpo-pix">
-                            <div class="qr-container">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
-                                    alt="QR">
+                            <div class="qr-code-box">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code">
                             </div>
-                            <div class="chave-container">
-                                <small>Chave CNPJ</small>
-                                <div class="input-fake">
-                                    <span id="chave-pix-texto">00.000.000/0001-00</span>
-
-                                    <button id="btn-copiar-pix" class="btn-copiar">
-                                        <i class="fa-regular fa-copy"></i>
-                                    </button>
+                            <div class="chave-area">
+                                <span class="label-chave">Chave CNPJ</span>
+                                <div class="input-copia">
+                                    <span id="texto-pix">00.000.000/0001-00</span>
+                                    <button id="btn-copiar-pix"><i class="fa-regular fa-copy"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="coluna-bancos">
-                    <h3 class="titulo-bancos">Contas Bancárias</h3>
-                    <div class="item-banco">
-                        <div class=""><img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_do_Brasil_logo.svg/2560px-Banco_do_Brasil_logo.svg.png"
-                                alt="BB"></div>
-                        <div class="dados-banco">
-                            <p>Ag: 1234 | Cc: 12345-6</p>
+                    <h3 class="titulo-bancos">Transferência Bancária</h3>
+                    <div class="lista-bancos">
+                        <div class="item-banco">
+                            <div class="banco-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_do_Brasil_logo.svg/2560px-Banco_do_Brasil_logo.svg.png" alt="BB"></div>
+                            <div class="banco-info">
+                                <h4>Banco do Brasil</h4>
+                                <p>Agência: <strong>1234-X</strong></p>
+                                <p>Conta: <strong>12345-6</strong></p>
+                            </div>
+                        </div>
+                        <div class="item-banco">
+                            <div class="banco-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Logo_Bradesco_%282008%29.svg/2560px-Logo_Bradesco_%282008%29.svg.png" alt="Bradesco"></div>
+                            <div class="banco-info">
+                                <h4>Bradesco</h4>
+                                <p>Agência: <strong>0001</strong></p>
+                                <p>Conta: <strong>98765-4</strong></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="secao-destino">
+    <section class="secao-transparencia">
         <div class="container">
-            <div class="cabecalho-destino">
-                <h2 class="titulo-elegante">Para onde vão os recursos?</h2>
-                <p>Na AD Barra, tratamos cada centavo como sagrado. Veja como sua contribuição mantém a obra viva.</p>
+            <div class="cabecalho-transparencia">
+                <h2 class="titulo-elegante">Destino dos Recursos</h2>
+                <div class="barra-decorativa-center"></div>
+                <p>Veja como sua fidelidade mantém a obra de Deus viva.</p>
             </div>
 
-            <div class="grid-detalhes">
-                
+            <div class="grid-destinos">
                 <div class="card-destino">
-                    <div class="icone-destaque">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <div class="texto-destino">
-                        <h3>Zelo pelo Templo</h3>
-                        <p>Pagamento de energia, água, limpeza e climatização. Garantimos que a Casa de Deus seja um ambiente acolhedor e digno para receber sua família.</p>
-                        <ul class="lista-mini">
-                            <li><i class="fa-solid fa-check"></i> Contas de Consumo</li>
-                            <li><i class="fa-solid fa-check"></i> Reformas e Reparos</li>
-                        </ul>
-                    </div>
+                    <div class="icon-destino"><i class="fa-solid fa-house"></i></div>
+                    <h4>Manutenção do Templo</h4>
+                    <p>Energia, água, limpeza e melhorias na estrutura física.</p>
                 </div>
-
                 <div class="card-destino">
-                    <div class="icone-destaque">
-                        <i class="fa-solid fa-earth-americas"></i>
-                    </div>
-                    <div class="texto-destino">
-                        <h3>Missões e Evangelismo</h3>
-                        <p>Sustento de missionários no campo e realização de cruzadas evangelísticas. Sua oferta atravessa fronteiras para salvar almas.</p>
-                        <ul class="lista-mini">
-                            <li><i class="fa-solid fa-check"></i> Missionários Estaduais</li>
-                            <li><i class="fa-solid fa-check"></i> Folhetos e Eventos</li>
-                        </ul>
-                    </div>
+                    <div class="icon-destino"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h4>Ação Social</h4>
+                    <p>Compra de cestas básicas e auxílio a famílias carentes.</p>
                 </div>
-
                 <div class="card-destino">
-                    <div class="icone-destaque">
-                        <i class="fa-solid fa-hand-holding-heart"></i>
-                    </div>
-                    <div class="texto-destino">
-                        <h3>Ação Social</h3>
-                        <p>Parte das ofertas é destinada à compra de cestas básicas e remédios para famílias carentes da nossa comunidade e membros em dificuldade.</p>
-                        <ul class="lista-mini">
-                            <li><i class="fa-solid fa-check"></i> Cestas Básicas</li>
-                            <li><i class="fa-solid fa-check"></i> Apoio a Famílias</li>
-                        </ul>
-                    </div>
+                    <div class="icon-destino"><i class="fa-solid fa-globe"></i></div>
+                    <h4>Missões</h4>
+                    <p>Sustento de missionários e projetos de evangelismo.</p>
+                </div>
+                <div class="card-destino">
+                    <div class="icon-destino"><i class="fa-solid fa-book-bible"></i></div>
+                    <h4>Ensino</h4>
+                    <p>Materiais para Escola Bíblica e Departamento Infantil.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Assembleia de Deus - Barra de Santa Rosa / PB</p>
+        <p>IGREJA EVANGELICA ASSEMBLEIA DE DEUS EM BARRA DE SANTA ROSA - PB</p>
+        <p>© 2025 - Todos os Direitos Reservados</p>
     </footer>
+
+    <div class="rodape">
+            <span>Desenvolvido por @nalldojr</span>
+    </div>
+    
     <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
     </a>
+    
     <script src="js/script.js"></script>
 </body>
-
 </html>

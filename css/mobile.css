@@ -1,25 +1,18 @@
-/* =========================================
-   MOBILE FIX 4.0 (MENU LISTA + HERO AJUSTADO)
-   ========================================= */
-
 @media (max-width: 850px) {
 
     /* --- 1. CABEÇALHO E BOTÃO --- */
     .header-principal {
         position: relative;
-        /* Importante para o menu se posicionar em relação a ele */
         padding: 10px 0;
     }
 
     .container-menu {
         padding: 0 20px;
-        /* Garante que o botão fique na direita e logo na esquerda */
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    /* Botão Hambúrguer Simples e Visível */
     .btn-mobile {
         display: flex;
         flex-direction: column;
@@ -31,9 +24,7 @@
         cursor: pointer;
         padding: 0;
         z-index: 1002;
-        /* Acima do menu */
         margin-left: auto;
-        /* Força ir para a direita se precisar */
     }
 
     .linha {
@@ -62,28 +53,23 @@
     #nav-principal {
         display: block;
         position: absolute;
-        /* Flutua embaixo do header */
         top: 100%;
-        /* Começa exatamente onde o header termina */
         left: 0;
         width: 100%;
         background-color: var(--cor-primaria);
-        /* Fundo Azul Escuro */
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         padding: 0;
         z-index: 1000;
 
-        /* Efeito de abrir/fechar (Slide) */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-out;
         border-bottom: 4px solid var(--cor-ouro);
     }
 
-    /* Quando ativo, a altura aumenta revelando o conteúdo */
+
     #nav-principal.active {
         max-height: 500px;
-        /* Altura suficiente para os links */
     }
 
     .menu-lista {
@@ -93,7 +79,6 @@
         padding: 20px 0;
         margin: 0;
         gap: 0;
-        /* Remove gap para usar padding nos links */
     }
 
     .menu-lista li {

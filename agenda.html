@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda - AD Barra de Santa Rosa</title>
     <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -20,7 +17,6 @@
     <link rel="stylesheet" href="css/agenda.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
-
 <body>
 
     <header class="header-principal">
@@ -32,7 +28,7 @@
                     <span>Barra de Santa Rosa</span>
                 </div>
             </div>
-
+            
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
@@ -54,99 +50,111 @@
 
     <section class="hero-page hero-agenda">
         <div class="hero-overlay-page">
-            <span class="tag-topo">Programação</span>
-            <h2>Agenda do Reino</h2>
-            <p>Não deixe de congregar, como é costume de alguns.</p>
+            <span class="tag-topo">Nossos Horários</span>
+            <h2>Agenda Semanal</h2>
+            <p>Alegrei-me quando me disseram: Vamos à casa do Senhor.</p>
         </div>
     </section>
 
     <section class="agenda-semanal">
         <div class="container">
-            <div class="cabecalho-agenda">
-                <h2 class="titulo-elegante">Semana de Cultos</h2>
-                <div class="barra-decorativa-center"></div>
-            </div>
-
+            
             <div class="grid-semana">
-                <div class="dia-card destaque-domingo">
-                    <div class="dia-label">DOMINGO</div>
-                    <div class="lista-cultos">
-                        <div class="culto-item">
-                            <span class="hora">09:00</span>
-                            <div class="detalhe-culto">
-                                <strong>EBD</strong>
-                                <small>Escola Bíblica</small>
-                            </div>
-                        </div>
-                        <div class="culto-item principal">
-                            <span class="hora">19:00</span>
-                            <div class="detalhe-culto">
-                                <strong>Culto da Família</strong>
-                                <small>Celebração</small>
-                            </div>
-                        </div>
+                
+                <div class="dia-card card-domingo">
+                    <div class="dia-header">
+                        <h3>Domingo</h3>
+                        <span class="dia-icon"><i class="fa-solid fa-sun"></i></span>
                     </div>
-                </div>
-
-                <div class="dia-card">
-                    <div class="dia-label">TERÇA-FEIRA</div>
-                    <div class="lista-cultos">
-                        <div class="culto-item">
-                            <span class="hora">19:30</span>
-                            <div class="detalhe-culto">
-                                <strong>Culto de Ensino</strong>
-                                <small>Doutrina</small>
+                    <div class="dia-body">
+                        <div class="evento-linha">
+                            <span class="hora-badge">09:00</span>
+                            <div class="evento-info">
+                                <h4>Escola Bíblica Dominical</h4>
+                                <p>Aprendizado da Palavra para todas as idades</p>
+                            </div>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="evento-linha">
+                            <span class="hora-badge">18:00</span>
+                            <div class="evento-info">
+                                <h4>Cultos da Noite</h4>
+                                <ul class="lista-rodizio">
+                                    <li><strong>1º Domingo:</strong> Adoração e Louvor</li>
+                                    <li><strong>2º Domingo:</strong> Missões</li>
+                                    <li><strong>3º Domingo:</strong> Evangelismo</li>
+                                    <li><strong>4º Domingo:</strong> Culto da Família</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="dia-card">
-                    <div class="dia-label">QUINTA-FEIRA</div>
-                    <div class="lista-cultos">
-                        <div class="culto-item">
-                            <span class="hora">19:30</span>
-                            <div class="detalhe-culto">
-                                <strong>Círculo de Oração</strong>
-                                <small>Intercessão</small>
+                    <div class="dia-header">
+                        <h3>Quarta-Feira</h3>
+                        <span class="dia-icon"><i class="fa-solid fa-fire"></i></span>
+                    </div>
+                    <div class="dia-body">
+                        <div class="evento-linha">
+                            <span class="hora-badge">19:00</span>
+                            <div class="evento-info">
+                                <h4>Círculo de Oração</h4>
+                                <p>Intercessão, busca e clamor pelo poder de Deus.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="eventos-especiais">
-        <div class="container">
-            <h2 class="titulo-elegante" style="color: white;">Próximos Eventos</h2>
-            <div class="grid-eventos">
-                <div class="card-evento">
-                    <div class="img-evento">
-                        <img src="https://images.unsplash.com/photo-1511553677255-ba939e5537e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="Santa Ceia">
-                        <div class="data-badge"><span class="dia">10</span><span class="mes">AGO</span></div>
+                <div class="dia-card">
+                    <div class="dia-header">
+                        <h3>Sexta-Feira</h3>
+                        <span class="dia-icon"><i class="fa-solid fa-book-open"></i></span>
                     </div>
-                    <div class="info-evento">
-                        <span class="tag-evento">Comunhão</span>
-                        <h3>Grande Santa Ceia</h3>
-                        <p>Venha participar da mesa do Senhor em comunhão com toda a igreja.</p>
-
-                        <a href="https://forms.gle/SEU_LINK_DO_GOOGLE_FORMS" target="_blank"
-                            class="btn-evento">Confirmar Presença</a>
+                    <div class="dia-body">
+                        <div class="evento-linha">
+                            <span class="hora-badge">19:00</span>
+                            <div class="evento-info">
+                                <h4>Culto de Ensino</h4>
+                                <p>Estudo profundo das doutrinas bíblicas.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                 <div class="dia-card card-especial">
+                    <div class="dia-header">
+                        <h3>1º Sábado do Mês</h3>
+                        <span class="dia-icon"><i class="fa-solid fa-wine-glass"></i></span>
+                    </div>
+                    <div class="dia-body">
+                        <div class="evento-linha">
+                            <span class="hora-badge">19:00</span>
+                            <div class="evento-info">
+                                <h4>Santa Ceia do Senhor</h4>
+                                <p>Memorial da morte e ressurreição de Cristo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Assembleia de Deus - Barra de Santa Rosa / PB</p>
+        <p>IGREJA EVANGELICA ASSEMBLEIA DE DEUS EM BARRA DE SANTA ROSA - PB</p>
+        <p>© 2025 - Todos os Direitos Reservados</p>
     </footer>
+
+    <div class="rodape">
+            <span>Desenvolvido por @nalldojr</span>
+    </div>
+    
     <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
     </a>
+    
     <script src="js/script.js"></script>
 </body>
-
 </html>
