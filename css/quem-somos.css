@@ -154,72 +154,127 @@
     font-size: 1.5rem;
 }
 
-/* --- 4. LIDERANÇA --- */
+/* =========================================
+   LIDERANÇA CIRCULAR (ESTILO AVATAR)
+   ========================================= */
+
 .secao-lideranca {
-    padding: 80px 20px;
-    background-color: var(--cor-branco);
+    padding: 100px 20px;
+    background-color: #fcfcfc; /* Fundo bem clarinho */
 }
 
 .cabecalho-secao {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+}
+
+.barra-decorativa-center {
+    width: 50px;
+    height: 3px;
+    background-color: var(--cor-ouro);
+    margin: 10px auto 20px auto;
 }
 
 .grid-lideres {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px; /* Mais espaço entre eles */
     flex-wrap: wrap;
 }
 
 .card-lider {
     width: 250px;
     text-align: center;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* Removemos o fundo branco e a sombra do card retangular antigo */
+    background: transparent;
+    box-shadow: none;
     transition: transform 0.3s;
 }
 
 .card-lider:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px); /* O card sobe levemente */
 }
 
-.foto-container {
-    height: 280px; /* Foto retangular alta estilo revista */
+/* O Círculo da Foto */
+.moldura-circular {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 25px; /* Centraliza a bola */
+    border-radius: 50%; /* Faz virar bola */
     overflow: hidden;
-    position: relative;
+    
+    /* Borda Dupla Elegante */
+    border: 5px solid white;
+    box-shadow: 
+        0 0 0 2px var(--cor-ouro), /* Borda fina dourada externa */
+        0 10px 20px rgba(0,0,0,0.15); /* Sombra suave */
+    
+    transition: all 0.4s ease;
 }
 
-.foto-container img {
+.moldura-circular img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a foto preencha sem esticar */
     transition: transform 0.5s;
 }
 
-/* Zoom suave na foto ao passar o mouse */
-.card-lider:hover .foto-container img {
-    transform: scale(1.1);
+/* Efeito Hover na Foto */
+.card-lider:hover .moldura-circular {
+    box-shadow: 
+        0 0 0 4px var(--cor-primaria), /* Borda fica azul ao passar mouse */
+        0 15px 30px rgba(0,0,0,0.2);
 }
 
-.info-lider {
-    padding: 20px;
-    border-bottom: 3px solid var(--cor-ouro);
+.card-lider:hover .moldura-circular img {
+    transform: scale(1.1); /* Zoom suave na foto */
 }
 
+/* Informações de Texto */
 .info-lider h3 {
     color: var(--cor-primaria);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 5px;
+    font-family: var(--fonte-titulos);
 }
 
-.info-lider p {
-    color: #888;
-    font-size: 0.9rem;
+.cargo-tag {
+    display: inline-block;
+    background-color: #eee;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Ícones de Redes Sociais do Líder */
+.redes-lider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0; /* Escondido por padrão */
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
+
+.redes-lider a {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.redes-lider a:hover {
+    color: var(--cor-ouro);
+}
+
+/* Mostra os ícones quando passa o mouse no card */
+.card-lider:hover .redes-lider {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsividade */
