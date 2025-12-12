@@ -1,8 +1,9 @@
 .hero-page {
+    background: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,12 +11,8 @@
     margin-top: -85px;
 }
 
-.hero-agenda {
-    background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
 .hero-overlay-page {
-    background: linear-gradient(135deg, rgba(14, 42, 71, 0.7), rgba(14, 42, 71, 0.95));
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9));
     width: 100%;
     height: 100%;
     display: flex;
@@ -24,195 +21,321 @@
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 80px;
-}
-
-.hero-overlay-page h2 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding-top: 100px;
 }
 
 .tag-topo {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    padding: 6px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 0.8rem;
+    color: var(--cor-ouro);
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
     margin-bottom: 20px;
-    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.05);
+}
+
+.hero-overlay-page h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: var(--fonte-titulos);
+    line-height: 1.1;
+    font-weight: 400;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .hero-overlay-page p {
-    font-size: 1.1rem;
-    max-width: 600px;
+    font-size: 1.3rem;
+    max-width: 700px;
     opacity: 0.9;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
+    color: #e2e8f0;
 }
 
-.agenda-semanal {
-    padding: 80px 20px;
-    background-color: #f8f9fa;
+.agenda-premium {
+    padding: 100px 20px;
+    background-color: #f2f4f6;
+    background-image: linear-gradient(to bottom, #eff1f3, #e5e7eb);
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-agenda {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px -5px rgba(0,0,0,0.06), 0 5px 15px -5px rgba(0,0,0,0.04);
+    position: relative;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card-agenda:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -10px rgba(0,0,0,0.1);
+}
+
+.domingo-master {
+    border-left: 5px solid var(--cor-ouro);
+    background: linear-gradient(to right, #fff, #fcfcfc);
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 12px 35px;
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.conteudo-agenda {
+    padding: 40px 50px;
+}
+
+.linha-evento {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef2f6;
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+}
+
+.hora-box .num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.tags-culto span {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #777;
+    background-color: #f1f5f9;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.divisor-elegante {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 35px 0;
+    width: 100%;
 }
 
 .grid-semana {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
-.dia-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
+.dia-comum {
+    padding: 35px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 4px solid #cbd5e1;
 }
 
-.dia-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(14, 42, 71, 0.1);
+.dia-comum:hover {
+    border-top-color: var(--cor-ouro);
 }
 
 .dia-header {
-    background-color: white;
-    padding: 25px;
+    margin-bottom: 25px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    border-bottom: 2px solid #f0f0f0;
+    gap: 15px;
 }
 
-.dia-header h3 {
-    margin: 0;
-    color: var(--cor-primaria);
-    font-size: 1.4rem;
-    font-family: var(--fonte-titulos);
-}
-
-.dia-icon {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(204, 160, 109, 0.1);
-    color: var(--cor-ouro);
+.icon-circle-soft {
+    width: 50px;
+    height: 50px;
+    background-color: #f1f5f9;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--cor-primaria);
     font-size: 1.2rem;
+    transition: all 0.3s;
 }
 
-.dia-body {
-    padding: 30px 25px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.evento-linha {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.hora-badge {
+.dia-comum:hover .icon-circle-soft {
     background-color: var(--cor-primaria);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    min-width: 65px;
-    text-align: center;
-    margin-top: 2px;
-}
-
-.evento-info h4 {
-    margin: 0 0 5px 0;
-    color: #333;
-    font-size: 1.1rem;
-}
-
-.evento-info p {
-    margin: 0;
-    color: #777;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.divisor {
-    height: 1px;
-    background-color: #f0f0f0;
-    margin: 20px 0;
-    width: 100%;
-}
-
-.card-domingo {
-    grid-row: span 2;
-    border-top: 4px solid var(--cor-ouro);
-}
-
-.card-especial {
-    background-color: var(--cor-primaria);
-    color: white;
-}
-
-.card-especial .dia-header {
-    background-color: rgba(255,255,255,0.05);
-    border-bottom-color: rgba(255,255,255,0.1);
-}
-
-.card-especial .dia-header h3 {
-    color: white;
-}
-
-.card-especial .evento-info h4 {
     color: var(--cor-ouro);
 }
 
-.card-especial .evento-info p {
-    color: #ccc;
-}
-
-.card-especial .hora-badge {
-    background-color: var(--cor-ouro);
+.dia-header h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem;
     color: var(--cor-primaria);
 }
 
-.lista-rodizio {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
+.hora-pill {
+    display: inline-block;
+    background-color: #eef2f6;
+    color: var(--cor-primaria);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
 }
 
-.lista-rodizio li {
-    font-size: 0.9rem;
+.conteudo-simples h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.conteudo-simples p {
     color: #666;
-    margin-bottom: 4px;
-    padding-left: 10px;
-    border-left: 2px solid #eee;
+    font-size: 0.95rem;
 }
 
-.lista-rodizio strong {
-    color: var(--cor-primaria);
+.card-dark {
+    background-color: var(--cor-primaria);
+    color: white;
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.conteudo-dark {
+    display: flex;
+    align-items: center;
+    padding: 40px 50px;
+    gap: 30px;
+}
+
+.icone-dark {
+    font-size: 2.5rem;
+    color: var(--cor-ouro);
+    background: rgba(255,255,255,0.05);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.texto-dark {
+    flex: 1;
+}
+
+.tag-especial {
+    color: var(--cor-ouro);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.texto-dark h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.texto-dark p {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.hora-dark {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.856);
+    font-family: var(--fonte-titulos);
 }
 
 @media (max-width: 768px) {
+    .conteudo-agenda {
+        padding: 30px 20px;
+    }
+    
+    .linha-evento {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
     .grid-semana {
         grid-template-columns: 1fr;
     }
-    .card-domingo {
-        grid-row: auto;
+    
+    .conteudo-dark {
+        flex-direction: column;
+        text-align: center;
     }
+    
+    .hora-dark {
+        display: none;
+    }
+    
     .hero-overlay-page h2 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 }
