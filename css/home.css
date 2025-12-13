@@ -1,11 +1,15 @@
+/* --- HERO SECTION (Ajuste de Espaçamento) --- */
 .hero-master {
     position: relative;
-    min-height: 100vh;
+    /* Reduzi de 115vh para 95vh para subir o conteúdo */
+    min-height: 95vh; 
     display: flex;
-    align-items: center;
+    align-items: center; 
     background-color: #0f172a;
     overflow: hidden;
-    padding-top: 80px;
+    /* Reduzi o padding-top para aproximar do menu */
+    padding-top: 90px; 
+    padding-bottom: 120px;
 }
 
 .hero-bg-texture {
@@ -14,8 +18,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    /* Substitua 'FOTO-HERO.jpeg' pela sua imagem de fundo */
     background-image: 
-        linear-gradient(to bottom, rgba(15, 23, 42, 0.7), #0f172a),
+        linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(15, 23, 42, 0.7)),
         url('../img/FOTO-HERO.jpeg');
     background-size: cover;
     background-position: center;
@@ -27,17 +32,18 @@
     margin: 0 auto;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha Texto e Cartaz pelo centro vertical */
     justify-content: space-between;
     padding: 0 20px;
     position: relative;
     z-index: 2;
-    gap: 60px;
+    gap: 40px;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 1; /* Ocupa o espaço restante */
     color: white;
+    max-width: 600px; /* Limita largura do texto para não esticar demais */
 }
 
 .hero-tag {
@@ -50,12 +56,13 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 25px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
 }
 
 .hero-content h1 {
-    font-size: 3.8rem;
+    font-size: 3.5rem; /* Tamanho ajustado para elegância */
     line-height: 1.1;
     margin-bottom: 25px;
     font-family: var(--fonte-titulos);
@@ -68,11 +75,12 @@
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #cbd5e1;
     margin-bottom: 40px;
     max-width: 550px;
     line-height: 1.7;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .hero-botoes {
@@ -83,190 +91,182 @@
 .btn-hero-outline {
     background: transparent;
     color: white;
-    padding: 16px 32px;
-    border-radius: 6px;
-    font-weight: 800;
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     transition: all 0.3s;
 }
 
 .btn-hero-outline:hover {
     border-color: var(--cor-ouro);
-    color: var(--cor-ouro);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--cor-primaria);
+    background-color: var(--cor-ouro);
 }
 
+/* Área do Cartaz */
 .hero-poster {
-    flex: 0.8;
+    flex: 0 0 450px; /* Largura fixa ideal para cartaz vertical */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    perspective: 1000px;
 }
 
-.glass-card {
-    background: rgba(20, 30, 50, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 40px;
-    color: #fff;
+/* Container da Imagem do Cartaz */
+.flyer-container {
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-    transform: rotate(-2deg);
-    transition: transform 0.5s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: -30px 30px 60px rgba(0,0,0,0.5); /* Sombra forte para destacar */
+    border: 1px solid rgba(255,255,255,0.1);
+    transform: rotateY(-10deg) rotateX(5deg); /* Leve inclinação 3D */
+    transition: all 0.5s ease;
+    background-color: #000;
 }
 
-.glass-card:hover {
-    transform: rotate(0deg) translateY(-5px);
+.flyer-container img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.glass-header {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    opacity: 0.8;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 15px;
+.flyer-container:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02); /* Endireita ao passar mouse */
+    border-color: var(--cor-ouro);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
-.glass-header i {
-    color: var(--cor-ouro);
+/* Responsividade Básica Hero */
+@media (max-width: 900px) {
+    .hero-master {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    
+    .container-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-poster {
+        flex: 1;
+        width: 100%;
+        max-width: 350px;
+        margin-top: 40px;
+    }
+    
+    .flyer-container {
+        transform: none; /* Remove efeito 3D no celular */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-botoes {
+        justify-content: center;
+    }
+}
+/* --- CARD DE ATALHO (Clicável & Elegante) --- */
+/* --- SEÇÃO ATALHOS PRO (Action Cards) --- */
+.secao-atalhos-pro {
+    padding: 60px 20px;
+    background-color: #f1f5f9; /* Um cinza um pouco mais sólido para contraste */
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.glass-content h2 {
-    font-family: var(--fonte-titulos);
-    font-size: 2.8rem;
-    line-height: 1;
-    color: var(--cor-ouro);
-    margin-bottom: 15px;
-}
-
-.glass-content .tema {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-    opacity: 0.9;
-    font-family: 'Playfair Display', serif;
-}
-
-.info-detalhes p {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.info-detalhes i {
-    color: var(--cor-ouro);
-    width: 20px;
-    text-align: center;
-}
-
-.glass-footer {
-    margin-top: 35px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255,255,255,0.7);
-}
-
-.acesso-rapido {
-    padding: 80px 20px;
-    background-color: #f8fafc;
-}
-
-.grid-icones {
+.grid-atalhos-pro {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: -120px;
-    position: relative;
-    z-index: 10;
 }
 
-.item-icone {
+/* O Cartão em si */
+.card-action {
     background: white;
-    padding: 35px;
-    border-radius: 16px;
-    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0,0,0,0.03);
-    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Detalhe Premium: Borda Lateral Dourada */
+    border-left: 5px solid var(--cor-ouro);
+    
+    /* Sombra inicial */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito Hover (Mouse) */
+.card-action:hover {
+    transform: translateY(-5px); /* Sobe um pouco */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Efeito Active (Clique/Toque) - Sensação tátil */
+.card-action:active {
+    transform: scale(0.98);
+    background-color: #fafafa;
+}
+
+/* Ícone à Esquerda */
+.icon-side {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.card-action:hover .icon-side {
+    color: var(--cor-ouro); /* Fica dourado no hover */
+}
+
+/* Texto no Meio */
+.text-side {
+    flex: 1; /* Ocupa o espaço do meio */
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-bottom: 3px solid transparent;
 }
 
-.item-icone:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(14, 42, 71, 0.15);
-    border-bottom-color: var(--cor-ouro);
-}
-
-.circulo-icone {
-    width: 70px;
-    height: 70px;
-    background-color: rgba(204, 160, 109, 0.1);
-    color: var(--cor-ouro);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    transition: all 0.3s;
-}
-
-.item-icone:hover .circulo-icone {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    transform: scale(1.1);
-}
-
-.item-icone h3 {
-    color: var(--cor-primaria);
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+.text-side h3 {
     font-family: var(--fonte-titulos);
+    color: #0f172a;
+    font-size: 1.2rem;
+    margin: 0 0 4px 0;
+    font-weight: 700;
 }
 
-.item-icone p {
+.text-side span {
     color: #64748b;
-    font-size: 1rem;
-    margin: 0;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
-.seta-link {
-    margin-top: 20px;
-    color: var(--cor-ouro);
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s;
+/* Seta à Direita */
+.arrow-side {
+    color: #cbd5e1; /* Cinza claro inicialmente */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
-.item-icone:hover .seta-link {
-    opacity: 1;
-    transform: translateX(0);
+/* Animação da Seta no Hover */
+.card-action:hover .arrow-side {
+    color: var(--cor-primaria);
+    transform: translateX(5px); /* Move para a direita */
 }
 
 .secao-cinema {

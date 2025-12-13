@@ -1,9 +1,14 @@
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 
-    /* --- 1. CABEÇALHO E BOTÃO --- */
     .header-principal {
-        position: relative;
-        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
     .container-menu {
@@ -11,6 +16,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .logo {
+        z-index: 1002;
     }
 
     .btn-mobile {
@@ -31,45 +40,40 @@
         display: block;
         width: 100%;
         height: 3px;
-        background-color: var(--cor-primaria);
+        background-color: #0f172a;
         border-radius: 2px;
         transition: 0.3s;
     }
 
-    /* Animação do X */
-    #nav-principal.active~.btn-mobile .linha:nth-child(1) {
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
     }
 
-    #nav-principal.active~.btn-mobile .linha:nth-child(2) {
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(2) {
         opacity: 0;
     }
 
-    #nav-principal.active~.btn-mobile .linha:nth-child(3) {
+    #nav-principal.active ~ .btn-mobile .linha:nth-child(3) {
         transform: translateY(-11px) rotate(-45deg);
     }
 
-    /* --- 2. O MENU (LISTINHA DESCENDO) --- */
     #nav-principal {
         display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--cor-primaria);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        padding: 0;
-        z-index: 1000;
-
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out;
-        border-bottom: 4px solid var(--cor-ouro);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding-top: 80px;
+        z-index: 1001;
+        transition: right 0.4s ease-in-out;
+        border-left: 1px solid #eee;
     }
 
-
     #nav-principal.active {
-        max-height: 500px;
+        right: 0;
     }
 
     .menu-lista {
@@ -84,169 +88,203 @@
     .menu-lista li {
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .menu-lista a {
         display: block;
-        padding: 15px 0;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
+        padding: 20px 0;
+        color: #0f172a;
+        font-size: 1.1rem;
+        font-weight: 700;
         text-transform: uppercase;
     }
 
     .menu-lista a:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: var(--cor-ouro);
+        background-color: #f8fafc;
+        color: #c69f6e;
     }
 
-    /* Botão Contribua no Mobile */
     .btn-contato {
-        margin-top: 10px;
+        margin-top: 20px;
         display: inline-block !important;
-        background-color: var(--cor-ouro) !important;
-        color: var(--cor-primaria) !important;
+        background-color: #0f172a !important;
+        color: white !important;
         border: none !important;
-        padding: 10px 30px !important;
+        padding: 15px 40px !important;
+        border-radius: 50px !important;
     }
 
-    /* --- 3. CORREÇÃO DOS HEROS (CAPAS) --- */
-
-    .hero-master,
-    .hero-page {
-        /* Remove a altura fixa de tela cheia que fica feia no mobile */
-        height: auto !important;
-        min-height: auto !important;
-
-        /* Adiciona respiro em cima e embaixo */
-        padding: 60px 20px;
-
-        /* Corrige imagem de fundo */
-        background-attachment: scroll !important;
-        /* Parallax off no mobile */
-        background-position: center center !important;
-        margin-top: 0 !important;
-        /* Remove margem negativa */
-    }
-
-    /* Ajuste dos textos da Capa */
-    .hero-overlay,
-    .hero-overlay-page {
-        background: rgba(14, 42, 71, 0.7);
-        /* Escurece um pouco mais pra ler melhor */
-        border-radius: 10px;
-        /* Um leve arredondamento */
-        padding: 30px 15px;
-        /* Espaço interno */
-    }
-
-    .hero-overlay h1,
-    .hero-overlay-page h2 {
-        font-size: 1.8rem;
-        /* Fonte menor para não quebrar */
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-
-    .hero-overlay p,
-    .hero-overlay-page p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    /* Botões da Capa um embaixo do outro */
-    .hero-botoes {
+    .container-hero {
         flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .btn-hero-principal,
-    .btn-hero-outline {
-        width: 100%;
-        display: block;
         text-align: center;
+        gap: 40px;
+        padding-bottom: 40px;
+        padding-top: 40px; 
     }
 
-    /* --- 4. AJUSTES DE LAYOUT GERAL --- */
-
-    /* Remove margens negativas que quebram o layout */
-    .acesso-rapido,
-    .hero-master {
-        margin-top: 0 !important;
-        top: 0 !important;
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    /* Transforma tudo em coluna única */
-    .grid-icones,
-    .container-split,
-    .container-split-video,
-    .grid-semana,
-    .grid-contato-moderno,
-    .layout-doacao {
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-poster {
+        width: 100%;
+        justify-content: center;
+        margin-top: 40px;
         display: flex;
-        flex-direction: column;
+    }
+
+    .glass-card {
+        transform: rotate(0deg); 
+        max-width: 340px;
+    }
+
+    .hero-master {
+        padding-top: 100px;
+        min-height: auto;
+        height: auto; 
+    }
+
+    .acesso-rapido {
+        margin-top: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .grid-icones {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        gap: 20px;
     }
 
     .item-icone {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 
-    /* Agenda Ajustes */
-    .culto-item {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .dia-card,
-    .card-evento,
-    .card-min,
-    .card-lider {
-        width: 100% !important;
-    }
-
-    /* Texto Justificado ou Esquerda para facilitar leitura */
-    .texto-historia,
-    .texto-mensagem {
-        text-align: left;
-    }
-
-    .video-wrapper,
-    .moldura-foto {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Ajuste Contato */
-    .coluna-info,
-    .coluna-form {
-        width: 100%;
-    }
-
-    .grid-mapa-premium {
-        flex-direction: column !important;
-    }
-
-    .convite-visita {
-        padding: 30px 20px;
-        /* Menos espaçamento no celular */
-    }
-
-    .mapa-frame {
-        height: 300px;
-        /* Altura fixa para o mapa no celular */
-    }
-
-    .lista-conforto {
+    .grid-visita {
         grid-template-columns: 1fr;
-        /* Uma coluna de diferenciais no celular */
+        gap: 50px;
     }
+
+    .mapa-visita {
+        height: 350px;
+    }
+
+    .cabecalho-cinema h2 {
+        font-size: 2.2rem;
+    }
+
+    .botoes-cinema {
+        flex-direction: column;
+    }
+
+    .hero-page {
+        height: auto !important;
+        padding: 120px 20px 60px !important;
+        margin-top: 0 !important;
+    }
+
+    .hero-overlay-page h2 {
+        font-size: 2.5rem;
+    }
+
+    .grid-historia, 
+    .layout-overlap, 
+    .grid-pilares-inline, 
+    .grid-lideres, 
+    .grid-ministerios, 
+    .grid-agenda {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .divisor-vertical {
+        width: 100px;
+        height: 1px;
+        margin: 0 auto;
+    }
+
+    .coluna-img-art, .coluna-imagem {
+        order: -1; 
+    }
+
+    .card-contato-wrapper {
+        flex-direction: column;
+    }
+
+    .painel-info, .painel-form {
+        padding: 40px 20px;
+    }
+
+    .row-duplo {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .layout-doacao {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .coluna-pix {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .card-pix-master {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .timeline-container {
+        padding: 0 10px;
+    }
+
+    .linha-evento {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .grid-semana {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-dark {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hora-dark {
+        display: none;
+    }
+
+    .grid-atalhos-pro {
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 15px;
+    }
+
+    .card-action {
+        padding: 20px; /* Um pouco menos de padding */
+        /* No mobile, a sombra pode ser mais sutil */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    }
+    
+    /* Garante que a seta fique sempre visível e colorida no mobile para indicar clique */
+    .arrow-side {
+        color: var(--cor-ouro); 
+        font-size: 1rem;
+    }
+
 }
 
-/* Desktop: esconde o botão */
-@media (min-width: 851px) {
+@media (min-width: 901px) {
     .btn-mobile {
         display: none !important;
     }
