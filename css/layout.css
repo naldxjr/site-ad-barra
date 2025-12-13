@@ -86,13 +86,13 @@
 .rodape-simples {
     background-color: #0f172a; /* Azul Escuro Profundo */
     color: white;
-    padding: 40px 20px 40px;
+    padding: 25px 15px 35px;
     margin-top: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .conteudo-central {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     text-align: center;
 }
@@ -119,7 +119,7 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .social-rodape a {
@@ -137,7 +137,7 @@
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .creditos-rodape {

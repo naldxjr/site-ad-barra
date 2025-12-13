@@ -144,4 +144,36 @@ function carregarVersiculo() {
     }
 }
 
+/* --- SISTEMA DE ATUALIZAÇÃO (CARTAZ + VÍDEO) --- */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Verifica se o arquivo de dados foi carregado corretamente
+    if (typeof atualizacaoSemanal !== 'undefined') {
+
+        // 1. Atualiza o Cartaz do Hero
+        const imgCartaz = document.getElementById('img-cartaz');
+        if (imgCartaz) {
+            imgCartaz.src = atualizacaoSemanal.cartazHero;
+        }
+
+        // 2. Atualiza o Título do Vídeo
+        const vidTitulo = document.getElementById('video-titulo');
+        if (vidTitulo) {
+            vidTitulo.innerText = atualizacaoSemanal.tituloVideo;
+        }
+
+        // 3. Atualiza a Descrição do Vídeo
+        const vidDesc = document.getElementById('video-descricao');
+        if (vidDesc) {
+            vidDesc.innerText = atualizacaoSemanal.descricaoVideo;
+        }
+
+        // 4. Atualiza o Link do YouTube
+        const vidIframe = document.getElementById('video-iframe');
+        if (vidIframe) {
+            vidIframe.src = atualizacaoSemanal.linkYoutube;
+        }
+    }
+});
+
 window.onload = carregarVersiculo;

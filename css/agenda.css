@@ -350,7 +350,7 @@
     font-weight: 400;
 }
 
-/* --- CARD DOMINGO (COMPACTO & CENTRALIZADO) --- */
+/* --- CARD DOMINGO (FORMATO TEXTO LIMPO) --- */
 .domingo-master {
     background: #ffffff;
     border-radius: 12px;
@@ -359,18 +359,20 @@
     position: relative;
     border: 1px solid rgba(0,0,0,0.03);
     border-left: 6px solid var(--cor-ouro);
+    
+    max-width: 850px; 
+    margin: 0 auto;
 }
 
 .domingo-master .conteudo-agenda {
     text-align: center;
-    /* Reduzi o padding para ficar mais compacto */
-    padding: 25px 20px 35px;
+    padding: 40px 30px; /* Espaçamento interno confortável */
 }
 
 .dia-badge {
     background-color: var(--cor-primaria);
     color: var(--cor-ouro);
-    padding: 8px 25px; /* Badge um pouco menor */
+    padding: 8px 30px;
     font-family: var(--fonte-titulos);
     font-size: 1.1rem;
     display: inline-block;
@@ -378,703 +380,86 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
-
-/* Linha do Evento (Manhã/Noite) */
-.domingo-master .linha-evento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Gap reduzido */
-    margin-bottom: 10px;
-}
-
-/* Caixa de Hora (Menor) */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    /* Reduzido de 70px para 55px */
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 5px 15px rgba(204, 160, 109, 0.3);
-}
-
-.hora-box .num {
-    font-size: 1.3rem; /* Fonte menor */
-    font-weight: 800;
-    line-height: 1;
-}
-
-.hora-box .min {
-    font-size: 0.65rem;
-    font-weight: 700;
-    margin-top: 0;
-}
-
-/* Textos Centralizados e Compactos */
-.domingo-master .info-evento {
-    text-align: center;
-    width: 100%;
-}
-
-.info-evento h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.3rem; /* Título menor */
-    color: var(--cor-primaria);
-    margin-bottom: 5px;
-    line-height: 1.2;
-}
-
-.info-evento p {
-    color: #64748b;
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-    line-height: 1.5;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.divisor-elegante {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 25px 0; /* Margem reduzida */
-    width: 100%;
-}
-
-/* --- CARD DOMINGO (SUPER COMPACTO & CENTRALIZADO) --- */
-.domingo-master {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.08); /* Sombra mais leve */
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-left: 5px solid var(--cor-ouro); /* Borda lateral mais fina */
     
-    /* O SEGREDO: Limita a largura do cartão para ele não ficar gigante */
-    max-width: 500px; 
-    margin: 0 auto; /* Centraliza o cartão na tela */
-}
-
-.domingo-master .conteudo-agenda {
-    text-align: center;
-    padding: 20px 15px 30px; /* Padding interno bem reduzido */
-}
-
-.dia-badge {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-    padding: 6px 20px;
-    font-family: var(--fonte-titulos);
-    font-size: 0.9rem; /* Fonte menor */
-    display: inline-block;
-    border-radius: 0 0 8px 0;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-/* Linha do Evento */
-.domingo-master .linha-evento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Espaço menor entre hora e texto */
-    margin-bottom: 5px;
-}
-
-/* Caixa de Hora (Bem menor) */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    /* Reduzido de 70px para 50px */
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 4px 10px rgba(204, 160, 109, 0.3);
-}
-
-.hora-box .num {
-    font-size: 1.2rem; /* Número menor */
-    font-weight: 800;
-    line-height: 1;
-}
-
-.hora-box .min {
-    font-size: 0.6rem;
-    font-weight: 700;
-    margin-top: -2px;
-}
-
-/* Textos */
-.domingo-master .info-evento {
-    text-align: center;
-    width: 100%;
-}
-
-.info-evento h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.2rem; /* Título menor */
-    color: var(--cor-primaria);
-    margin-bottom: 4px;
-    line-height: 1.2;
-}
-
-.info-evento p {
-    color: #64748b;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    line-height: 1.4;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Divisor Fino */
-.divisor-elegante {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 20px 0; /* Menos espaço vertical */
-    width: 100%;
-}
-
-/* --- CARD DOMINGO (TAMANHO MÉDIO & CENTRALIZADO) --- */
-.domingo-master {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 12px 35px -8px rgba(0,0,0,0.08);
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-left: 6px solid var(--cor-ouro);
-    
-    /* Aumentei de 500px para 650px (Tamanho médio ideal) */
-    max-width: 650px; 
-    margin: 0 auto;
-}
-
-.domingo-master .conteudo-agenda {
-    text-align: center;
-    /* Mais espaço interno para respirar */
-    padding: 35px 40px 45px;
-}
-
-.dia-badge {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-    padding: 10px 30px;
-    font-family: var(--fonte-titulos);
-    font-size: 1.1rem;
-    display: inline-block;
-    border-radius: 0 0 10px 0;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Linha do Evento */
-.domingo-master .linha-evento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-/* Caixa de Hora (Tamanho Médio) */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    /* Aumentei de 50px para 65px */
-    width: 65px;
-    height: 65px;
-    border-radius: 10px;
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 5px 15px rgba(204, 160, 109, 0.3);
-}
-
-.hora-box .num {
-    font-size: 1.4rem; /* Fonte média */
-    font-weight: 800;
-    line-height: 1;
-}
-
-.hora-box .min {
-    font-size: 0.7rem;
-    font-weight: 700;
-    margin-top: -2px;
-}
-
-/* Textos */
-.domingo-master .info-evento {
-    text-align: center;
-    width: 100%;
-}
-
-.info-evento h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.5rem; /* Título com mais presença */
-    color: var(--cor-primaria);
-    margin-bottom: 6px;
-    line-height: 1.2;
-}
-
-.info-evento p {
-    color: #64748b;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    line-height: 1.5;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Divisor */
-.divisor-elegante {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 30px 0;
-    width: 100%;
-}
-
-/* --- CARD DOMINGO (LARGO & CENTRALIZADO) --- */
-.domingo-master {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-left: 6px solid var(--cor-ouro);
-    
-    /* Aumentado para 850px (Bem mais largo nas laterais) */
-    max-width: 850px; 
-    margin: 0 auto;
-}
-
-.domingo-master .conteudo-agenda {
-    text-align: center;
-    padding: 35px 50px 50px; /* Mais espaço lateral interno */
-}
-
-.dia-badge {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-    padding: 10px 40px; /* Badge mais larga */
-    font-family: var(--fonte-titulos);
-    font-size: 1.2rem;
-    display: inline-block;
-    border-radius: 0 0 12px 0;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Linha do Evento */
-.domingo-master .linha-evento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-/* Caixa de Hora */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    width: 70px; /* Um pouco maior para acompanhar a largura */
-    height: 70px;
-    border-radius: 12px;
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
-}
-
-.hora-box .num {
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.hora-box .min {
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-top: -2px;
-}
-
-/* Textos */
-.domingo-master .info-evento {
-    text-align: center;
-    width: 100%;
-}
-
-.info-evento h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.6rem;
-    color: var(--cor-primaria);
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.info-evento p {
-    color: #64748b;
-    font-size: 1.05rem;
-    margin-bottom: 5px;
-    line-height: 1.6;
-    /* Aumentei o limite do texto para preencher melhor o card largo */
-    max-width: 700px; 
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Divisor */
-.divisor-elegante {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 35px 0;
-    width: 100%;
-}
-
-/* --- CARD DOMINGO (LARGO & CENTRALIZADO) --- */
-.domingo-master {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-left: 6px solid var(--cor-ouro);
-    
-    /* Aumentado para 850px (Bem mais largo nas laterais) */
-    max-width: 850px; 
-    margin: 0 auto;
-}
-
-.domingo-master .conteudo-agenda {
-    text-align: center;
-    padding: 35px 50px 50px; /* Mais espaço lateral interno */
-}
-
-.dia-badge {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-    padding: 10px 40px; /* Badge mais larga */
-    font-family: var(--fonte-titulos);
-    font-size: 1.2rem;
-    display: inline-block;
-    border-radius: 0 0 12px 0;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Linha do Evento */
-.domingo-master .linha-evento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-/* Caixa de Hora */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    width: 70px; /* Um pouco maior para acompanhar a largura */
-    height: 70px;
-    border-radius: 12px;
-    color: #64748b;
-    flex-shrink: 0;
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
-}
-
-.hora-box .num {
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.hora-box .min {
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-top: -2px;
-}
-
-/* Textos */
-.domingo-master .info-evento {
-    text-align: center;
-    width: 100%;
-}
-
-.info-evento h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.6rem;
-    color: var(--cor-primaria);
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.info-evento p {
-    color: #64748b;
-    font-size: 1.05rem;
-    margin-bottom: 5px;
-    line-height: 1.6;
-    /* Aumentei o limite do texto para preencher melhor o card largo */
-    max-width: 700px; 
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Divisor */
-.divisor-elegante {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 35px 0;
-    width: 100%;
-}
-
-/* --- CARD DOMINGO (CENTRALIZAÇÃO PERFEITA) --- */
-.domingo-master {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-left: 6px solid var(--cor-ouro);
-    
-    max-width: 850px; 
-    margin: 0 auto; /* Centraliza o card na página */
-}
-
-.domingo-master .conteudo-agenda {
-    text-align: center; /* Força alinhamento de texto central */
-    padding: 35px 50px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza itens flexíveis (linhas) */
-}
-
-.dia-badge {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-    padding: 10px 40px;
-    font-family: var(--fonte-titulos);
-    font-size: 1.2rem;
-    display: inline-block;
-    border-radius: 0 0 12px 0;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    /* Centraliza o badge se ele for tratado como bloco */
-    margin: 0 auto; 
-    position: relative;
-    left: 50%;
+    /* Centraliza o badge */
+    position: absolute;
+    top: 0; left: 50%;
     transform: translateX(-50%);
-    width: auto;
 }
 
-/* Linha do Evento (Container) */
-.domingo-master .linha-evento {
+/* Container da Linha (9h • Texto) */
+.evento-linha-texto {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza itens horizontalmente */
-    justify-content: center;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza na tela */
     gap: 15px;
-    width: 100%; /* Garante que o container ocupe a largura */
-    margin-bottom: 10px;
+    flex-wrap: wrap; /* Permite quebrar linha no mobile se precisar */
 }
 
-/* Caixa de Hora */
-.hora-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f5f9;
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    color: #64748b;
-    flex-shrink: 0;
-    margin: 0 auto; /* Garante centro */
-}
-
-.hora-box.destaque {
-    background-color: var(--cor-ouro);
-    color: var(--cor-primaria);
-    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
-}
-
-.hora-box .num {
-    font-size: 1.5rem;
-    font-weight: 800;
+/* Estilo do Horário (09h / 18h) */
+.horario-gold {
+    font-family: var(--fonte-titulos);
+    font-size: 2.5rem; /* Bem grande e chamativo */
+    font-weight: 400;
+    color: var(--cor-ouro);
     line-height: 1;
 }
 
-.hora-box .min {
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-top: -2px;
+/* Bolinha separadora (•) */
+.dot-sep {
+    font-size: 1.5rem;
+    color: #cbd5e1; /* Cinza claro */
+    margin-top: 5px; /* Leve ajuste visual */
 }
 
-/* Textos (Informações) */
-.domingo-master .info-evento {
-    text-align: center; /* Centraliza texto interno */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza filhos flexíveis */
-}
-
-.info-evento h3 {
+/* Título do Evento */
+.titulo-linha {
     font-family: var(--fonte-titulos);
     font-size: 1.6rem;
     color: var(--cor-primaria);
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin: 0;
+    font-weight: 400;
     text-align: center;
 }
 
-.info-evento p {
-    color: #64748b;
-    font-size: 1.05rem;
-    margin-bottom: 5px;
-    line-height: 1.6;
-    max-width: 700px;
-    /* Margens automáticas para centralizar o bloco de texto */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/* Barrinhas verticais (|) entre os cultos */
+.pipe {
+    color: var(--cor-ouro);
+    margin: 0 8px;
+    font-weight: 300;
 }
 
-/* Divisor */
-.divisor-elegante {
+/* Divisor horizontal entre manhã e noite */
+.divisor-sutil {
     height: 1px;
     background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 35px auto; /* Auto nas laterais */
-    width: 100%;
-    max-width: 700px; /* Limita a largura da linha */
+    margin: 30px auto;
+    width: 80%;
 }
 
-/* Lista de Domingos (Escala) */
-.lista-domingos {
-    list-style: none;
-    padding: 0;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center; /* Centraliza os itens da lista (li) */
-    width: 100%;
-}
-
-.lista-domingos li {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o conteúdo dentro da linha */
-    gap: 20px;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #f8fafc;
-    width: 100%;
-    max-width: 600px; /* Largura controlada para manter alinhamento visual */
-}
-
-.tag-domingo {
-    background-color: #f1f5f9;
-    color: var(--cor-primaria);
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    padding: 6px 15px;
-    border-radius: 6px;
-    min-width: 110px;
-    text-align: center;
-}
-
-.nome-culto {
-    color: #475569;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: left; /* O nome do culto fica alinhado à esquerda do seu bloco, mas o bloco está centralizado */
-    min-width: 200px; /* Garante uma base sólida para o texto */
-}
-
-/* Responsividade Mobile */
+/* RESPONSIVIDADE */
 @media (max-width: 600px) {
-    .domingo-master .conteudo-agenda {
-        padding: 30px 20px;
-    }
-
-    /* No mobile, empilha e centraliza tudo */
-    .lista-domingos li {
-        flex-direction: column;
+    .evento-linha-texto {
+        flex-direction: column; /* No celular, coloca o horário em cima do texto */
         gap: 5px;
-        padding-bottom: 15px;
-        text-align: center;
     }
     
-    .nome-culto {
-        text-align: center; /* Centraliza texto no mobile */
-        min-width: auto;
+    .dot-sep {
+        display: none; /* Esconde a bolinha no mobile */
     }
     
-    .domingo-master {
-        max-width: 100%;
+    .horario-gold {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    
+    .titulo-linha {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+    
+    .pipe {
+        display: inline-block; /* Mantém as barras no texto */
     }
 }
 

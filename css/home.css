@@ -8,8 +8,8 @@
     background-color: #0f172a;
     overflow: hidden;
     /* Reduzi o padding-top para aproximar do menu */
-    padding-top: 90px; 
-    padding-bottom: 120px;
+    padding-top: 60px; 
+    padding-bottom: 110px;
 }
 
 .hero-bg-texture {
@@ -108,68 +108,51 @@
     background-color: var(--cor-ouro);
 }
 
-/* Área do Cartaz */
+/* --- Ajuste do Tamanho do Cartaz (Hero) --- */
+
 .hero-poster {
-    flex: 0 0 450px; /* Largura fixa ideal para cartaz vertical */
+    flex: 1;
     display: flex;
-    justify-content: center;
-    perspective: 1000px;
+    justify-content: center; /* Centraliza na área dele */
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
-/* Container da Imagem do Cartaz */
 .flyer-container {
+    position: relative;
     width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: -30px 30px 60px rgba(0,0,0,0.5); /* Sombra forte para destacar */
-    border: 1px solid rgba(255,255,255,0.1);
-    transform: rotateY(-10deg) rotateX(5deg); /* Leve inclinação 3D */
-    transition: all 0.5s ease;
-    background-color: #000;
+    
+    /* AUMENTADO: De 350px/400px para 520px */
+    max-width: 520px; 
+    
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Sombra potente */
+    transition: transform 0.3s ease;
+    
+    /* Borda dourada fina para acabamento */
+    border: 1px solid rgba(204, 160, 109, 0.3);
 }
 
 .flyer-container img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 15px;
 }
 
+/* Efeito ao passar o mouse */
 .flyer-container:hover {
-    transform: rotateY(0deg) rotateX(0deg) scale(1.02); /* Endireita ao passar mouse */
-    border-color: var(--cor-ouro);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 30px 60px rgba(204, 160, 109, 0.15);
 }
 
-/* Responsividade Básica Hero */
+/* --- RESPONSIVIDADE (Para não ficar gigante no celular) --- */
 @media (max-width: 900px) {
-    .hero-master {
-        min-height: auto;
-        padding-top: 120px;
-        padding-bottom: 80px;
-    }
-    
-    .container-hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-poster {
-        flex: 1;
-        width: 100%;
-        max-width: 350px;
-        margin-top: 40px;
-    }
-    
     .flyer-container {
-        transform: none; /* Remove efeito 3D no celular */
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-botoes {
-        justify-content: center;
+        /* No mobile/tablet, volta para um tamanho seguro */
+        max-width: 350px; 
+        margin: 0 auto; /* Garante que fique centralizado */
     }
 }
 /* --- CARD DE ATALHO (Clicável & Elegante) --- */

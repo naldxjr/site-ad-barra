@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AD Barra de Santa Rosa - PB</title>
     <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -17,6 +20,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
+
 <body>
 
     <header class="header-principal">
@@ -28,11 +32,11 @@
                     <span>Barra de Santa Rosa</span>
                 </div>
             </a>
-            
+
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="quem-somos.html">A Igreja</a></li>
                     <li><a href="ministerios.html">Ministérios</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="contato.html">Contato</a></li>
@@ -51,7 +55,7 @@
     <section class="hero-master">
         <div class="hero-bg-texture"></div>
         <div class="container-hero">
-            
+
             <div class="hero-content">
                 <span class="hero-tag">Bem-vindo à Família de Deus</span>
                 <h1>
@@ -59,7 +63,8 @@
                     <span class="destaque-dourado">COMUNHÃO</span> E<br>
                     <span class="destaque-dourado">ORAÇÃO</span>
                 </h1>
-                <p>Somos uma família de fé, conectada pelo amor de Cristo e movida pelo Espírito Santo. Existe um lugar especial para você aqui.</p>
+                <p>Somos uma família de fé, conectada pelo amor de Cristo e movida pelo Espírito Santo. Existe um lugar
+                    especial para você aqui.</p>
                 <div class="hero-botoes">
                     <a href="agenda.html" class="btn-hero-outline">
                         Nossa Agenda
@@ -69,7 +74,7 @@
 
             <div class="hero-poster">
                 <div class="flyer-container">
-                    <img src="img/FOTO-CARTAZ.jpeg" alt="Cartaz do Evento">
+                    <img id="img-cartaz" src="img/placeholder.jpg" alt="Cartaz">
                 </div>
             </div>
 
@@ -79,7 +84,7 @@
     <section class="secao-atalhos-pro">
         <div class="container">
             <div class="grid-atalhos-pro">
-                
+
                 <a href="contato.html" class="card-action">
                     <div class="icon-side">
                         <i class="fa-solid fa-hands-praying"></i>
@@ -137,18 +142,20 @@
     </section>
 
     <section class="secao-cinema-gold">
-        <div class="bg-pattern"></div> <div class="container">
+        <div class="bg-pattern"></div>
+        <div class="container">
             <div class="cabecalho-cinema">
                 <div class="tag-live-box">
                     <span class="pulsar-dot"></span> Assista Agora
                 </div>
-                <h2>A Poderosa Mão de Deus</h2>
-                <p>Foi edificado pelo culto de domingo? Reveja e compartilhe essa palavra que transforma vidas.</p>
+                <h2 id="video-titulo">Título Carregando...</h2>
+
+                <p id="video-descricao">Descrição Carregando...</p>
             </div>
-            
+
             <div class="tela-cinema-pro">
                 <div class="moldura-video-gold">
-                    <iframe src="https://www.youtube.com/embed/T7_aTmh5_8Y?start=279" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="video-iframe" src="" title="YouTube video player" ... allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -170,27 +177,30 @@
                     <span class="tag-pequena">Bem-vindo à Casa</span>
                     <h2>Planeje sua Visita</h2>
                     <p>Queremos receber você e sua família com muito amor. Veja como é fácil chegar e participar.</p>
-                    
+
                     <div class="lista-servicos">
                         <div class="item-servico">
                             <i class="fa-solid fa-calendar-check"></i>
                             <div>
                                 <h4>Horários Principais</h4>
-                                <p>Domingo: 09h (EBD) e 18h (Culto)<br>Quarta: 19h00 (Oração)</p>
+                                <p>Domingo: 09h (EBD) e 18h (Culto)<br>Quarta: 19h00 (Circulo de Oração)<br>Sexta: 19h00 (Culto de Ensino)</p>
                             </div>
                         </div>
                         <div class="item-servico">
                             <i class="fa-solid fa-child"></i>
                             <div>
                                 <h4>Para as Crianças</h4>
-                                <p>Ministério infantil (Pequeninos de Jesus) funcionando em todos os cultos de domingo.</p>
+                                <p>Ministério infantil (Pequeninos de Jesus) funcionando em todos os cultos de quarta e domingo.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mapa-visita">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15849.483643569209!2d-36.0567195!3d-6.7245161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ae706edb4bf1a7%3A0x49d4178d4b3ed8e9!2sIgreja%20Assembl%C3%A9ia%20De%20Deus%20Miss%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1765472428368!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15849.483643569209!2d-36.0567195!3d-6.7245161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ae706edb4bf1a7%3A0x49d4178d4b3ed8e9!2sIgreja%20Assembl%C3%A9ia%20De%20Deus%20Miss%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1765472428368!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -199,7 +209,7 @@
     <footer class="rodape-simples">
         <div class="container">
             <div class="conteudo-central">
-                
+
                 <div class="marca-rodape">
                     <h3>AD Barra</h3>
                     <p>Barra de Santa Rosa - PB</p>
@@ -224,6 +234,8 @@
         </div>
     </footer>
 
+    <script src="js/dados.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
