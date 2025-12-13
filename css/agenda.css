@@ -1,65 +1,83 @@
-.hero-page {
+/* --- HERO AGENDA (IMPACTO) --- */
+.hero-agenda {
     background: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 60vh;
+    min-height: 400px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-top: -85px;
 }
 
-.hero-overlay-page {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9));
+.hero-overlay-dark {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95));
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-content-center {
     text-align: center;
     color: white;
-    padding-top: 100px;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeUp 1s ease-out;
 }
 
-.tag-topo {
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tag-hero-gold {
+    display: inline-block;
     color: var(--cor-ouro);
+    border: 1px solid rgba(204, 160, 109, 0.5);
+    padding: 8px 20px;
+    border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px 25px;
-    border-radius: 50px;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    background: rgba(255,255,255,0.05);
 }
 
-.hero-overlay-page h2 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+.hero-content-center h1 {
     font-family: var(--fonte-titulos);
+    font-size: 3.5rem;
     line-height: 1.1;
+    margin-bottom: 20px;
     font-weight: 400;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.hero-overlay-page p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    opacity: 0.9;
+.divider-hero {
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-ouro);
+    margin: 0 auto 25px;
+}
+
+.hero-content-center p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
+    font-size: 1.2rem;
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
+/* --- AGENDA PREMIUM --- */
 .agenda-premium {
-    padding: 100px 20px;
-    background-color: #f2f4f6;
-    background-image: linear-gradient(to bottom, #eff1f3, #e5e7eb);
+    padding: 80px 20px 100px;
+    background-color: #f8fafc;
 }
 
 .timeline-container {
@@ -70,40 +88,33 @@
     gap: 40px;
 }
 
-.card-agenda {
+/* CARD DOMINGO (MASTER) */
+.domingo-master {
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 35px -5px rgba(0,0,0,0.06), 0 5px 15px -5px rgba(0,0,0,0.04);
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
     position: relative;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.5);
-}
-
-.card-agenda:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px -10px rgba(0,0,0,0.1);
-}
-
-.domingo-master {
-    border-left: 5px solid var(--cor-ouro);
-    background: linear-gradient(to right, #fff, #fcfcfc);
+    border: 1px solid rgba(0,0,0,0.03);
+    /* Borda lateral dourada grossa */
+    border-left: 6px solid var(--cor-ouro);
 }
 
 .dia-badge {
     background-color: var(--cor-primaria);
     color: var(--cor-ouro);
-    padding: 12px 35px;
+    padding: 10px 30px;
     font-family: var(--fonte-titulos);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: inline-block;
-    border-radius: 0 0 12px 0;
+    border-radius: 0 0 10px 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .conteudo-agenda {
-    padding: 40px 50px;
+    padding: 30px 50px 50px;
 }
 
 .linha-evento {
@@ -112,26 +123,28 @@
     align-items: flex-start;
 }
 
+/* Caixa de Hora */
 .hora-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #eef2f6;
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
+    background-color: #f1f5f9;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
     color: #64748b;
     flex-shrink: 0;
 }
 
 .hora-box.destaque {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 15px rgba(204, 160, 109, 0.4);
 }
 
 .hora-box .num {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -144,145 +157,172 @@
 
 .info-evento h3 {
     font-family: var(--fonte-titulos);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--cor-primaria);
     margin-bottom: 8px;
     line-height: 1.2;
 }
 
 .info-evento p {
-    color: #555;
-    font-size: 1.05rem;
+    color: #64748b;
+    font-size: 1rem;
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
 .tags-culto span {
-    display: inline-block;
-    font-size: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #777;
+    color: #475569;
     background-color: #f1f5f9;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
 }
+
+.tags-culto i { color: var(--cor-ouro); }
 
 .divisor-elegante {
     height: 1px;
-    background: #e2e8f0;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
     margin: 35px 0;
     width: 100%;
 }
 
+/* GRID SEMANA */
 .grid-semana {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-.dia-comum {
-    padding: 35px;
-    text-align: center;
-    background-color: #fff;
-    border-top: 4px solid #cbd5e1;
-}
-
-.dia-comum:hover {
-    border-top-color: var(--cor-ouro);
-}
-
-.dia-header {
-    margin-bottom: 25px;
+.card-dia {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.03);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s;
 }
 
-.icon-circle-soft {
+.card-dia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.icon-side-gold {
     width: 50px;
     height: 50px;
-    background-color: #f1f5f9;
+    background-color: rgba(204, 160, 109, 0.1);
+    color: var(--cor-ouro);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-primaria);
-    font-size: 1.2rem;
-    transition: all 0.3s;
-}
-
-.dia-comum:hover .icon-circle-soft {
-    background-color: var(--cor-primaria);
-    color: var(--cor-ouro);
-}
-
-.dia-header h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.5rem;
-    color: var(--cor-primaria);
-}
-
-.hora-pill {
-    display: inline-block;
-    background-color: #eef2f6;
-    color: var(--cor-primaria);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-weight: 800;
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-}
-
-.conteudo-simples h4 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.conteudo-simples p {
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.card-dark {
-    background-color: var(--cor-primaria);
-    color: white;
-    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-}
-
-.conteudo-dark {
-    display: flex;
-    align-items: center;
-    padding: 40px 50px;
-    gap: 30px;
-}
-
-.icone-dark {
-    font-size: 2.5rem;
-    color: var(--cor-ouro);
-    background: rgba(255,255,255,0.05);
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    font-size: 1.4rem;
     flex-shrink: 0;
 }
 
-.texto-dark {
-    flex: 1;
+.card-dia:hover .icon-side-gold {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
 }
+
+.content-side { flex: 1; }
+
+.header-dia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.header-dia h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin: 0;
+}
+
+.hora-pill {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.content-side h4 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.content-side p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* CARD CEIA (DARK PREMIUM) */
+.card-ceia-dark {
+    background-color: #3e2b26; /* Marrom Café Escuro */
+    color: white;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(204, 160, 109, 0.3); /* Borda Dourada Fina */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.bg-pattern-ceia {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+}
+
+.conteudo-ceia {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 35px 40px;
+    gap: 30px;
+    z-index: 2;
+}
+
+.icone-ceia {
+    width: 70px;
+    height: 70px;
+    background: rgba(204, 160, 109, 0.15);
+    border: 1px solid rgba(204, 160, 109, 0.3);
+    color: var(--cor-ouro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.texto-ceia { flex: 1; }
 
 .tag-especial {
     color: var(--cor-ouro);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
@@ -290,52 +330,834 @@
     margin-bottom: 8px;
 }
 
-.texto-dark h3 {
+.texto-ceia h3 {
     font-family: var(--fonte-titulos);
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
     color: white;
 }
 
-.texto-dark p {
-    color: #cbd5e1;
-    font-size: 1.05rem;
-    line-height: 1.5;
+.texto-ceia p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    margin: 0;
 }
 
-.hora-dark {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.856);
+.hora-ceia {
     font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-ouro);
+    font-weight: 400;
 }
 
-@media (max-width: 768px) {
-    .conteudo-agenda {
+/* --- CARD DOMINGO (COMPACTO & CENTRALIZADO) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 6px solid var(--cor-ouro);
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center;
+    /* Reduzi o padding para ficar mais compacto */
+    padding: 25px 20px 35px;
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 8px 25px; /* Badge um pouco menor */
+    font-family: var(--fonte-titulos);
+    font-size: 1.1rem;
+    display: inline-block;
+    border-radius: 0 0 10px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Linha do Evento (Manhã/Noite) */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Gap reduzido */
+    margin-bottom: 10px;
+}
+
+/* Caixa de Hora (Menor) */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    /* Reduzido de 70px para 55px */
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 15px rgba(204, 160, 109, 0.3);
+}
+
+.hora-box .num {
+    font-size: 1.3rem; /* Fonte menor */
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+/* Textos Centralizados e Compactos */
+.domingo-master .info-evento {
+    text-align: center;
+    width: 100%;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.3rem; /* Título menor */
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 25px 0; /* Margem reduzida */
+    width: 100%;
+}
+
+/* --- CARD DOMINGO (SUPER COMPACTO & CENTRALIZADO) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.08); /* Sombra mais leve */
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 5px solid var(--cor-ouro); /* Borda lateral mais fina */
+    
+    /* O SEGREDO: Limita a largura do cartão para ele não ficar gigante */
+    max-width: 500px; 
+    margin: 0 auto; /* Centraliza o cartão na tela */
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center;
+    padding: 20px 15px 30px; /* Padding interno bem reduzido */
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 6px 20px;
+    font-family: var(--fonte-titulos);
+    font-size: 0.9rem; /* Fonte menor */
+    display: inline-block;
+    border-radius: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Linha do Evento */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaço menor entre hora e texto */
+    margin-bottom: 5px;
+}
+
+/* Caixa de Hora (Bem menor) */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    /* Reduzido de 70px para 50px */
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 4px 10px rgba(204, 160, 109, 0.3);
+}
+
+.hora-box .num {
+    font-size: 1.2rem; /* Número menor */
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+/* Textos */
+.domingo-master .info-evento {
+    text-align: center;
+    width: 100%;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem; /* Título menor */
+    color: var(--cor-primaria);
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Divisor Fino */
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 20px 0; /* Menos espaço vertical */
+    width: 100%;
+}
+
+/* --- CARD DOMINGO (TAMANHO MÉDIO & CENTRALIZADO) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px -8px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 6px solid var(--cor-ouro);
+    
+    /* Aumentei de 500px para 650px (Tamanho médio ideal) */
+    max-width: 650px; 
+    margin: 0 auto;
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center;
+    /* Mais espaço interno para respirar */
+    padding: 35px 40px 45px;
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 10px 30px;
+    font-family: var(--fonte-titulos);
+    font-size: 1.1rem;
+    display: inline-block;
+    border-radius: 0 0 10px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Linha do Evento */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* Caixa de Hora (Tamanho Médio) */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    /* Aumentei de 50px para 65px */
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 15px rgba(204, 160, 109, 0.3);
+}
+
+.hora-box .num {
+    font-size: 1.4rem; /* Fonte média */
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+/* Textos */
+.domingo-master .info-evento {
+    text-align: center;
+    width: 100%;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem; /* Título com mais presença */
+    color: var(--cor-primaria);
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Divisor */
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* --- CARD DOMINGO (LARGO & CENTRALIZADO) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 6px solid var(--cor-ouro);
+    
+    /* Aumentado para 850px (Bem mais largo nas laterais) */
+    max-width: 850px; 
+    margin: 0 auto;
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center;
+    padding: 35px 50px 50px; /* Mais espaço lateral interno */
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 10px 40px; /* Badge mais larga */
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Linha do Evento */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Caixa de Hora */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    width: 70px; /* Um pouco maior para acompanhar a largura */
+    height: 70px;
+    border-radius: 12px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
+}
+
+.hora-box .num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+/* Textos */
+.domingo-master .info-evento {
+    text-align: center;
+    width: 100%;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    /* Aumentei o limite do texto para preencher melhor o card largo */
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Divisor */
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 35px 0;
+    width: 100%;
+}
+
+/* --- CARD DOMINGO (LARGO & CENTRALIZADO) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 6px solid var(--cor-ouro);
+    
+    /* Aumentado para 850px (Bem mais largo nas laterais) */
+    max-width: 850px; 
+    margin: 0 auto;
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center;
+    padding: 35px 50px 50px; /* Mais espaço lateral interno */
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 10px 40px; /* Badge mais larga */
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Linha do Evento */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Caixa de Hora */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    width: 70px; /* Um pouco maior para acompanhar a largura */
+    height: 70px;
+    border-radius: 12px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
+}
+
+.hora-box .num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+/* Textos */
+.domingo-master .info-evento {
+    text-align: center;
+    width: 100%;
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    /* Aumentei o limite do texto para preencher melhor o card largo */
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Divisor */
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 35px 0;
+    width: 100%;
+}
+
+/* --- CARD DOMINGO (CENTRALIZAÇÃO PERFEITA) --- */
+.domingo-master {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-left: 6px solid var(--cor-ouro);
+    
+    max-width: 850px; 
+    margin: 0 auto; /* Centraliza o card na página */
+}
+
+.domingo-master .conteudo-agenda {
+    text-align: center; /* Força alinhamento de texto central */
+    padding: 35px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens flexíveis (linhas) */
+}
+
+.dia-badge {
+    background-color: var(--cor-primaria);
+    color: var(--cor-ouro);
+    padding: 10px 40px;
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Centraliza o badge se ele for tratado como bloco */
+    margin: 0 auto; 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+
+/* Linha do Evento (Container) */
+.domingo-master .linha-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center;
+    gap: 15px;
+    width: 100%; /* Garante que o container ocupe a largura */
+    margin-bottom: 10px;
+}
+
+/* Caixa de Hora */
+.hora-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    color: #64748b;
+    flex-shrink: 0;
+    margin: 0 auto; /* Garante centro */
+}
+
+.hora-box.destaque {
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    box-shadow: 0 5px 20px rgba(204, 160, 109, 0.25);
+}
+
+.hora-box .num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hora-box .min {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+/* Textos (Informações) */
+.domingo-master .info-evento {
+    text-align: center; /* Centraliza texto interno */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza filhos flexíveis */
+}
+
+.info-evento h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.info-evento p {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    max-width: 700px;
+    /* Margens automáticas para centralizar o bloco de texto */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Divisor */
+.divisor-elegante {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 35px auto; /* Auto nas laterais */
+    width: 100%;
+    max-width: 700px; /* Limita a largura da linha */
+}
+
+/* Lista de Domingos (Escala) */
+.lista-domingos {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center; /* Centraliza os itens da lista (li) */
+    width: 100%;
+}
+
+.lista-domingos li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo dentro da linha */
+    gap: 20px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #f8fafc;
+    width: 100%;
+    max-width: 600px; /* Largura controlada para manter alinhamento visual */
+}
+
+.tag-domingo {
+    background-color: #f1f5f9;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 6px 15px;
+    border-radius: 6px;
+    min-width: 110px;
+    text-align: center;
+}
+
+.nome-culto {
+    color: #475569;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left; /* O nome do culto fica alinhado à esquerda do seu bloco, mas o bloco está centralizado */
+    min-width: 200px; /* Garante uma base sólida para o texto */
+}
+
+/* Responsividade Mobile */
+@media (max-width: 600px) {
+    .domingo-master .conteudo-agenda {
         padding: 30px 20px;
     }
-    
-    .linha-evento {
+
+    /* No mobile, empilha e centraliza tudo */
+    .lista-domingos li {
         flex-direction: column;
+        gap: 5px;
+        padding-bottom: 15px;
         text-align: center;
-        align-items: center;
-        gap: 15px;
     }
     
+    .nome-culto {
+        text-align: center; /* Centraliza texto no mobile */
+        min-width: auto;
+    }
+    
+    .domingo-master {
+        max-width: 100%;
+    }
+}
+
+/* RESPONSIVIDADE (MOBILE CORRIGIDO) */
+@media (max-width: 850px) {
+    
+    /* --- HERO MOBILE --- */
+    .hero-agenda {
+        height: 90vh;
+    min-height: auto;
+        /* Zera o padding aqui para a foto não vazar sem o azul */
+        padding: 0; 
+        background-attachment: scroll; 
+        background-position: center top;
+    }
+
+    /* O padding vai aqui para o azul cobrir tudo */
+    .hero-overlay-dark {
+        padding: 200px 20px 60px; /* Topo maior por causa do menu */
+        height: auto;
+        min-height: 100%;
+    }
+
+    .hero-content-center {
+        padding: 0 20px;
+    }
+
+    .hero-content-center h1 {
+        font-size: 2.4rem; 
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .hero-content-center p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .tag-hero-gold {
+        font-size: 0.65rem;
+        padding: 6px 16px;
+        margin-bottom: 20px;
+    }
+
+    .divider-hero {
+        margin: 0 auto 20px;
+    }
+
+    /* --- AJUSTES GERAIS MOBILE --- */
+    .conteudo-agenda {
+        padding: 30px 20px;
+
+    }
+
+    .domingo-master {
+        max-width: 100%;
+    }
+
+    .linha-evento {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
     .grid-semana {
         grid-template-columns: 1fr;
     }
-    
-    .conteudo-dark {
+
+    .card-dia {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
-    
-    .hora-dark {
-        display: none;
+
+    .conteudo-ceia {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
     }
-    
-    .hero-overlay-page h2 {
-        font-size: 2.8rem;
+
+    .hora-ceia {
+        font-size: 1.8rem;
+        margin-top: 15px;
     }
 }

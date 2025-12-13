@@ -1,69 +1,83 @@
-/* --- HERO PARALLAX --- */
-.hero-page {
-    /* Use a imagem de fundo que preferir aqui */
+/* --- HERO IMPACTO (Mantido o tamanho anterior que estava bom) --- */
+.hero-impacto {
     background: url('https://images.unsplash.com/photo-1507692049790-de58293a4697?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 55vh; /* Altura confortável */
+    height: 70vh;
+    min-height: 400px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin-top: -85px; /* Para ficar atrás do menu transparente, se houver */
+    margin-top: -85px;
 }
 
-.hero-overlay-page {
-    /* Gradiente escuro para o texto branco aparecer bem */
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95));
+.hero-overlay-dark {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95));
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-    padding-top: 80px; /* Compensar o menu fixo */
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
-.tag-topo {
-    color: var(--cor-ouro, #cca06d); /* Fallback cor ouro */
-    font-weight: 600;
+.content-hero-center {
+    text-align: center;
+    color: white;
+    max-width: 750px;
+    animation: fadeUp 1s ease-out;
+    padding: 0 20px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tag-hero-gold {
+    display: inline-block;
+    color: var(--cor-ouro);
+    border: 1px solid rgba(204, 160, 109, 0.5);
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     margin-bottom: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px 28px;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
 }
 
-.titulo-hero {
+.content-hero-center h1 {
+    font-family: var(--fonte-titulos);
     font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif; /* Fonte elegante do título */
     line-height: 1.1;
+    margin-bottom: 20px;
     font-weight: 400;
-    color: #fff;
 }
 
-.descricao-hero {
-    font-size: 1.1rem;
-    max-width: 700px;
-    opacity: 0.9;
-    font-family: 'Lato', sans-serif; /* Fonte do texto corrido */
-    line-height: 1.6;
+.divider-hero {
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-ouro);
+    margin: 0 auto 25px;
+}
+
+.content-hero-center p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
     color: #e2e8f0;
-    font-weight: 300;
+    line-height: 1.6;
 }
 
-/* --- HISTÓRIA LUXURY (Overlap Layout) --- */
+/* --- HISTÓRIA (Texto Justificado + Título Centralizado) --- */
 .secao-historia-luxury {
-    padding: 120px 20px;
+    padding: 80px 20px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -77,14 +91,8 @@
     margin: 0 auto;
 }
 
-.coluna-img-art {
-    position: relative;
-}
-
-.moldura-arte {
-    position: relative;
-    z-index: 1;
-}
+.coluna-img-art { position: relative; }
+.moldura-arte { position: relative; z-index: 1; }
 
 .moldura-arte img {
     width: 100%;
@@ -93,48 +101,35 @@
     display: block;
 }
 
-/* Efeito de caixa de fundo */
 .moldura-arte::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
+    top: -15px; left: -15px; width: 100%; height: 100%;
     border: 2px solid var(--cor-ouro);
     z-index: -1;
 }
 
 .box-destaque {
     position: absolute;
-    bottom: 30px;
-    right: -30px;
+    bottom: 25px; right: -25px;
     background: var(--cor-primaria);
     color: white;
-    padding: 20px 30px;
+    padding: 15px 25px;
     z-index: 2;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: flex; align-items: center; gap: 12px;
     border-radius: 4px;
 }
 
-.box-destaque i {
-    font-size: 1.5rem;
-    color: var(--cor-ouro);
+.box-destaque i { font-size: 1.3rem; color: var(--cor-ouro); }
+.box-destaque span { font-family: var(--fonte-titulos); font-size: 1rem; letter-spacing: 1px; }
+
+.coluna-texto-art { 
+    padding-left: 20px; 
+    /* Garante alinhamento geral */
 }
 
-.box-destaque span {
-    font-family: var(--fonte-titulos);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-}
-
-.coluna-texto-art {
-    padding-left: 20px;
-}
-
+/* Tag centralizada */
 .tag-section {
     color: var(--cor-ouro);
     font-size: 0.8rem;
@@ -142,41 +137,51 @@
     letter-spacing: 3px;
     font-weight: 700;
     margin-bottom: 15px;
-    display: block;
+    /* Centralização */
+    display: table; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Título centralizado */
 .coluna-texto-art h2 {
     font-family: var(--fonte-titulos);
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: var(--cor-primaria);
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    text-align: center; /* Centraliza o título */
 }
 
+/* Texto Justificado */
 .coluna-texto-art p {
     color: #475569;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     margin-bottom: 20px;
     font-family: 'DM Sans', sans-serif;
+    text-align: justify; /* Texto alinhado nas duas margens */
 }
 
+/* Citação Centralizada */
 .quote-signature {
     margin-top: 30px;
     border-top: 1px solid #e2e8f0;
     padding-top: 20px;
+    text-align: center; /* Centraliza a assinatura */
 }
 
 .quote-signature p {
     font-family: var(--fonte-titulos);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--cor-primaria);
     font-style: italic;
     margin-bottom: 5px;
+    text-align: center; /* Força o centro na citação */
 }
 
 .quote-signature cite {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #94a3b8;
     font-weight: 700;
     font-style: normal;
@@ -184,186 +189,253 @@
     letter-spacing: 1px;
 }
 
-/* --- FUNDAMENTOS (Clean & Classy) --- */
-.secao-pilares-classy {
-    padding: 100px 20px;
-    background-color: #f8fafc; /* Silver Light */
-    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-size: 40px 40px;
-    border-top: 1px solid #e2e8f0;
+/* --- FUNDAMENTOS (SUPER COMPACTO) --- */
+.secao-fundamentos-dot {
+    /* Padding reduzido */
+    padding: 60px 20px;
+    background-color: #3e2b26;
+    background-image: radial-gradient(#6d5045 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    text-align: center;
+    border-top: 4px solid var(--cor-ouro);
+}
+
+.header-fundamentos {
+    max-width: 800px;
+    margin: 0 auto 40px; /* Margem reduzida */
+}
+
+.tag-top-dark {
+    color: var(--cor-ouro);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.header-fundamentos h2 {
+    font-family: var(--fonte-titulos);
+    /* Tamanho reduzido */
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.header-fundamentos p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.grid-fundamentos-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Gap menor */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card-dot {
+    background: white;
+    /* Padding interno do card bem menor */
+    padding: 30px 25px;
+    text-align: left;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-dot:hover {
+    transform: translateY(-5px);
+}
+
+/* Ícone menor */
+.icon-square-brown {
+    width: 45px;
+    height: 45px;
+    background-color: #3e2b26;
+    color: var(--cor-ouro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.card-dot h3 {
+    font-family: var(--fonte-titulos);
+    /* Título menor */
+    font-size: 1.4rem;
+    color: #3e2b26;
+    margin-bottom: 10px;
+}
+
+.card-dot p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Número de fundo bem menor e discreto */
+.bg-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-family: var(--fonte-titulos);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #f3f3f3;
+    opacity: 0.6;
+    line-height: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* --- LIDERANÇA (RETRATO COMPACTO & REFINADO) --- */
+.secao-lideranca-retrato {
+    padding: 60px 20px 80px;
+    background-color: #f8fafc;
 }
 
 .header-center {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .header-center h2 {
     font-family: var(--fonte-titulos);
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: var(--cor-primaria);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .gold-dot {
-    width: 10px;
-    height: 10px;
+    width: 6px; height: 6px;
     background-color: var(--cor-ouro);
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
 }
-
 .gold-dot::before, .gold-dot::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    width: 60px;
-    height: 1px;
-    background-color: #e2e8f0;
+    content: ''; position: absolute; top: 2px; width: 40px; height: 1px; background-color: #e2e8f0;
 }
+.gold-dot::before { right: 10px; }
+.gold-dot::after { left: 10px; }
 
-.gold-dot::before { right: 20px; }
-.gold-dot::after { left: 20px; }
-
-.grid-pilares-fina {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
+.grid-lideres-retrato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.card-pilar-fino {
-    background: white;
-    padding: 50px 35px;
+.perfil-retrato {
+    width: 230px; 
     text-align: center;
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-radius: 4px;
 }
 
-.card-pilar-fino:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
-    border-color: rgba(204, 160, 109, 0.3);
-}
-
-.card-pilar-fino.destaque-center {
-    border-top: 4px solid var(--cor-ouro);
-    transform: scale(1.02); /* Levemente maior */
-}
-
-.icon-top {
-    font-size: 2.5rem;
-    color: var(--cor-ouro);
-    margin-bottom: 25px;
-}
-
-.card-pilar-fino h3 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.8rem;
-    color: var(--cor-primaria);
-    margin-bottom: 15px;
-}
-
-.card-pilar-fino p {
-    color: #64748b;
-    line-height: 1.6;
-}
-
-/* --- LIDERANÇA GOLD --- */
-.secao-lideranca-gold {
-    padding: 120px 20px;
-    background-color: #fff;
-}
-
-.grid-lideres-gold {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.perfil-gold {
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.perfil-gold:hover {
-    transform: translateY(-8px);
-}
-
-.foto-moldura {
-    width: 240px;
-    height: 300px; /* Retangular para diferenciar */
-    margin: 0 auto 25px;
+/* MOLDURA REFINADA COM A CARA DO SITE */
+.moldura-retangular {
+    width: 100%;
+    height: 280px;
     position: relative;
-    border: 1px solid #e2e8f0;
-    padding: 8px;
+    overflow: hidden;
+    border-radius: 4px;
+    
+    /* Sombra base ligeiramente azulada para combinar com a paleta */
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    
+    /* Prepara uma borda transparente para a transição suave */
+    border: 2px solid transparent;
+    
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição mais elegante */
 }
 
-.foto-moldura img {
+/* Efeito Hover Refinado */
+.perfil-retrato:hover .moldura-retangular {
+    transform: translateY(-7px); /* Sobe um pouco mais */
+    
+    /* Sombra mais rica e profunda no hover */
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15), 0 5px 15px rgba(198, 159, 110, 0.1);
+    
+    /* A borda dourada aparece suavemente */
+    border-color: var(--cor-ouro);
+}
+
+.moldura-retangular img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* SEM FILTRO CINZA */
+    transition: transform 0.6s ease;
 }
 
-/* Detalhe de borda deslocada ao passar o mouse */
-.foto-moldura::after {
-    content: '';
+.perfil-retrato:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay compacto (Mantido igual) */
+.overlay-nome {
     position: absolute;
-    top: 15px; left: 15px; right: -15px; bottom: -15px;
-    border: 2px solid var(--cor-ouro);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+    padding: 25px 15px 15px; /* Ajuste leve no padding superior do gradiente */
+    text-align: left;
+    border-bottom: 2px solid transparent; /* Prepara para o hover */
+    transition: all 0.4s ease;
 }
 
-.perfil-gold:hover .foto-moldura::after {
-    opacity: 1;
-    transform: translate(-5px, -5px);
+/* Detalhe extra: barra dourada na base do overlay ao passar o mouse */
+.perfil-retrato:hover .overlay-nome {
+    border-bottom-color: var(--cor-ouro);
 }
 
-.info-gold h3 {
+.overlay-nome h3 {
+    color: white;
     font-family: var(--fonte-titulos);
-    font-size: 1.6rem;
-    color: var(--cor-primaria);
-    margin-bottom: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
 }
 
-.info-gold .cargo {
-    color: #94a3b8;
-    font-size: 0.85rem;
-    font-weight: 700;
+.overlay-nome span {
+    color: var(--cor-ouro);
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
+/* RESPONSIVIDADE */
 @media (max-width: 850px) {
-    .layout-overlap {
-        grid-template-columns: 1fr;
-        gap: 60px;
+    .hero-impacto { height: auto; padding: 100px 0 60px; }
+    .content-hero-center h1 { font-size: 2.5rem; }
+    
+    .layout-overlap { grid-template-columns: 1fr; gap: 40px; }
+    .moldura-arte::before { display: none; }
+    .box-destaque { right: 0; bottom: -20px; padding: 10px 15px; }
+    
+    .grid-lideres-retrato { flex-direction: column; align-items: center; gap: 50px; }
+    
+    .perfil-retrato { width: 100%; max-width: 280px; }
+    
+    .moldura-retangular { 
+        height: 310px; 
+        /* DOURADO FIXO NO MOBILE */
+        border-color: var(--cor-ouro); 
     }
     
-    .hero-text-box h1 {
-        font-size: 2.8rem;
+    /* LINHA DOURADA FIXA NO MOBILE */
+    .overlay-nome {
+        border-bottom-color: var(--cor-ouro);
     }
     
-    .moldura-arte::before {
-        display: none;
-    }
-    
-    .box-destaque {
-        right: 0;
-        bottom: -20px;
-        padding: 15px 20px;
-    }
-    
-    .card-pilar-fino.destaque-center {
-        transform: none;
-        margin-top: 0;
-    }
+    .header-fundamentos h2 { font-size: 2rem; }
 }

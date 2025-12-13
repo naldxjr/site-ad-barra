@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda - AD Barra de Santa Rosa</title>
+
     <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -32,9 +33,9 @@
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="quem-somos.html" style="color: var(--cor-ouro);">Quem Somos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
                     <li><a href="ministerios.html">Ministérios</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="agenda.html" style="color: var(--cor-ouro);">Agenda</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li><a href="contribua.html" class="btn-contato">Contribua</a></li>
                 </ul>
@@ -48,11 +49,16 @@
         </div>
     </header>
 
-    <section class="hero-page">
-        <div class="hero-overlay-page">
-            <span class="tag-topo">Nossa Rotina</span>
-            <h2>Tempo de Buscar a Deus</h2>
-            <p>"Ensina-nos a contar os nossos dias, de tal maneira que alcancemos corações sábios."</p>
+    <section class="hero-agenda">
+        <div class="hero-overlay-dark">
+            <div class="container">
+                <div class="hero-content-center">
+                    <span class="tag-hero-gold">Nossa Rotina</span>
+                    <h1>Tempo de Buscar a Deus</h1>
+                    <div class="divider-hero"></div>
+                    <p>"Ensina-nos a contar os nossos dias, de tal maneira que alcancemos corações sábios."</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -63,79 +69,101 @@
                 
                 <div class="card-agenda domingo-master">
                     <div class="dia-badge">DOMINGO</div>
+                    
                     <div class="conteudo-agenda">
                         <div class="linha-evento">
                             <div class="hora-box">
                                 <span class="num">09</span>
-                                <span class="min">00</span>
+                                <span class="min">horas</span>
                             </div>
                             <div class="info-evento">
                                 <h3>Escola Bíblica Dominical (EBD)</h3>
-                                <p>Um tempo precioso de aprendizado da Palavra para todas as faixas etárias.</p>
+                                <p>Aprendizado da Palavra para todas as idades.</p>
                             </div>
                         </div>
                         
                         <div class="divisor-elegante"></div>
 
-                        <div class="linha-evento">
+                        <div class="linha-evento destaque-noite">
                             <div class="hora-box destaque">
                                 <span class="num">18</span>
-                                <span class="min">00</span>
+                                <span class="min">horas</span>
                             </div>
                             <div class="info-evento">
-                                <h3>Culto da Família</h3>
-                                <p>Celebração, louvor e ministração da Palavra. Traga sua casa para a Casa de Deus.</p>
-                                <div class="tags-culto">
-                                    <span>Louvor</span>
-                                    <span>Palavra</span>
-                                    <span>Comunhão</span>
-                                </div>
+                                <h3>Cultos da Noite</h3>
+                                <p>Uma programação especial para cada semana:</p>
+                                
+                                <ul class="lista-domingos">
+                                    <li>
+                                        <span class="tag-domingo">1º Domingo</span>
+                                        <span class="nome-culto">Santo Culto de Ceia</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag-domingo">2º Domingo</span>
+                                        <span class="nome-culto">Culto de Missões</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag-domingo">3º Domingo</span>
+                                        <span class="nome-culto">Culto da Família</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag-domingo">4º Domingo</span>
+                                        <span class="nome-culto">Culto de Jovens</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag-domingo">5º Domingo</span>
+                                        <span class="nome-culto">Culto Especial / Deptos.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid-semana">
-                    <div class="card-agenda dia-comum">
-                        <div class="dia-header">
-                            <div class="icon-circle-soft">
-                                <i class="fa-solid fa-fire-flame-curved"></i>
-                            </div>
-                            <h3>Quarta-Feira</h3>
+                    
+                    <div class="card-dia">
+                        <div class="icon-side-gold">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
                         </div>
-                        <div class="conteudo-simples">
-                            <span class="hora-pill">19:30</span>
+                        <div class="content-side">
+                            <div class="header-dia">
+                                <h3>Quarta-Feira</h3>
+                                <span class="hora-pill">19:30</span>
+                            </div>
                             <h4>Círculo de Oração</h4>
                             <p>Intercessão e busca pelo poder de Deus.</p>
                         </div>
                     </div>
 
-                    <div class="card-agenda dia-comum">
-                        <div class="dia-header">
-                            <div class="icon-circle-soft">
-                                <i class="fa-solid fa-book-open-reader"></i>
-                            </div>
-                            <h3>Sexta-Feira</h3>
+                    <div class="card-dia">
+                        <div class="icon-side-gold">
+                            <i class="fa-solid fa-book-open-reader"></i>
                         </div>
-                        <div class="conteudo-simples">
-                            <span class="hora-pill">19:30</span>
+                        <div class="content-side">
+                            <div class="header-dia">
+                                <h3>Sexta-Feira</h3>
+                                <span class="hora-pill">19:30</span>
+                            </div>
                             <h4>Culto de Ensino</h4>
                             <p>Estudo profundo das doutrinas bíblicas.</p>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="card-agenda card-dark">
-                    <div class="conteudo-dark">
-                        <div class="icone-dark">
+                <div class="card-ceia-dark">
+                    <div class="bg-pattern-ceia"></div>
+                    <div class="conteudo-ceia">
+                        <div class="icone-ceia">
                             <i class="fa-solid fa-wine-glass"></i>
                         </div>
-                        <div class="texto-dark">
+                        <div class="texto-ceia">
                             <span class="tag-especial">Todo 1º Sábado</span>
                             <h3>Santo Culto de Ceia</h3>
                             <p>O memorial sagrado da morte e ressurreição de Cristo.</p>
                         </div>
-                        <div class="hora-dark">
+                        <div class="hora-ceia">
                             19:00
                         </div>
                     </div>
@@ -149,34 +177,24 @@
     <footer class="rodape-simples">
         <div class="container">
             <div class="conteudo-central">
-                
                 <div class="marca-rodape">
                     <h3>AD Barra</h3>
                     <p>Barra de Santa Rosa - PB</p>
                 </div>
-
                 <div class="social-rodape">
                     <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-
                 <div class="divisor-rodape"></div>
-
                 <div class="creditos-rodape">
                     <span class="copy">&copy; 2025 AD Barra. Todos os direitos reservados.</span>
-                    <span class="dev">
-                        Desenvolvido por <a href="https://instagram.com/nalldojr" target="_blank">@nalldojr</a>
-                    </span>
+                    <span class="dev">Desenvolvido por <a href="https://instagram.com/nalldojr" target="_blank">@nalldojr</a></span>
                 </div>
-
             </div>
         </div>
     </footer>
     
-    <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> Fale Conosco
-    </a>
     
     <script src="js/script.js"></script>
 </body>

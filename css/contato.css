@@ -1,65 +1,84 @@
-.hero-page {
+/* --- HERO CONTATO (IMPACTO) --- */
+.hero-contato {
     background: url('https://images.unsplash.com/photo-1423666639041-f140fc380b5ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 50vh;
+    height: 65vh;
+    min-height: 400px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-top: -85px;
 }
 
-.hero-overlay-page {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95));
+.hero-overlay-dark {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95));
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    padding-top: 100px;
+    justify-content: center;
+    padding-top: 80px;
 }
 
-.tag-topo {
+.hero-content-center {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tag-hero-gold {
+    display: inline-block;
     color: var(--cor-ouro);
+    border: 1px solid rgba(204, 160, 109, 0.5);
+    padding: 8px 20px;
+    border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px 25px;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.05);
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
 }
 
-.hero-overlay-page h2 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
+.hero-content-center h1 {
     font-family: var(--fonte-titulos);
+    font-size: 3.5rem;
     line-height: 1.1;
+    margin-bottom: 20px;
     font-weight: 400;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.hero-overlay-page p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    opacity: 0.9;
+.divider-hero {
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-ouro);
+    margin: 0 auto 25px;
+}
+
+.hero-content-center p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
+    font-size: 1.2rem;
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
+/* --- SEÇÃO CONTATO (CARD FLUTUANTE) --- */
 .secao-contato-premium {
-    padding: 100px 20px;
-    background-color: #f2f4f6;
-    margin-bottom: -50px; 
+    padding: 80px 20px 100px;
+    background-color: #f8fafc;
+    margin-bottom: -80px; /* Sobe o card sobre o mapa */
     position: relative;
     z-index: 10;
 }
@@ -69,28 +88,32 @@
     max-width: 1100px;
     margin: 0 auto;
     background: white;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 50px -10px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
+/* PAINEL INFO (AZUL ESCURO) */
 .painel-info {
     flex: 0.8;
-    background-color: var(--cor-primaria);
+    background-color: #0f172a; /* Azul Marinho Profundo */
     color: white;
-    padding: 60px;
+    padding: 50px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Decoração de fundo sutil */
 .painel-info::before {
     content: '';
     position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(204,160,109,0.1) 0%, transparent 70%);
+    bottom: -50px; right: -50px;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(204,160,109,0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -116,20 +139,18 @@
 
 .item-contato {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 }
 
 .icon-box {
-    width: 50px;
-    height: 50px;
+    width: 50px; height: 50px;
     background: rgba(255,255,255,0.1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
     color: var(--cor-ouro);
     font-size: 1.2rem;
+    flex-shrink: 0;
     transition: all 0.3s;
 }
 
@@ -140,7 +161,7 @@
 
 .text-contato span {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(255,255,255,0.5);
@@ -151,12 +172,15 @@
 .text-contato p {
     font-size: 1.1rem;
     font-weight: 500;
+    margin: 0;
+    color: white;
+    line-height: 1.4;
 }
 
 .social-area {
-    margin-top: 60px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 50px;
     padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .social-area span {
@@ -172,25 +196,25 @@
 }
 
 .social-icons-small a {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     background: rgba(255,255,255,0.1);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     color: white;
     transition: all 0.3s;
+    font-size: 1.1rem;
 }
 
 .social-icons-small a:hover {
     background: var(--cor-ouro);
+    color: var(--cor-primaria);
     transform: translateY(-3px);
 }
 
+/* PAINEL FORM (BRANCO) */
 .painel-form {
     flex: 1.2;
-    padding: 60px;
+    padding: 50px;
     background-color: white;
 }
 
@@ -201,18 +225,13 @@
     margin-bottom: 30px;
 }
 
-.input-wrapper {
-    margin-bottom: 25px;
-}
+.input-wrapper { margin-bottom: 25px; }
 
 .row-duplo {
     display: flex;
     gap: 20px;
 }
-
-.row-duplo .input-wrapper {
-    flex: 1;
-}
+.row-duplo .input-wrapper { flex: 1; }
 
 label {
     display: block;
@@ -238,20 +257,20 @@ input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--cor-ouro);
     background-color: white;
-    box-shadow: 0 0 0 4px rgba(204, 160, 109, 0.1);
+    box-shadow: 0 0 0 4px rgba(204, 160, 109, 0.15);
 }
 
 .btn-enviar-premium {
     background-color: var(--cor-primaria);
     color: white;
     border: none;
-    padding: 18px 40px;
-    border-radius: 8px;
+    padding: 16px 40px;
+    border-radius: 6px;
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     text-transform: uppercase;
@@ -259,29 +278,31 @@ input:focus, select:focus, textarea:focus {
 }
 
 .btn-enviar-premium:hover {
-    background-color: #0f172a;
-    transform: translateY(-2px);
+    background-color: var(--cor-ouro);
+    color: var(--cor-primaria);
+    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* MAPA FULL */
 .mapa-full {
-    height: 450px;
+    height: 500px;
     width: 100%;
-    filter: grayscale(100%);
-    transition: filter 0.5s;
-}
-
-.mapa-full:hover {
-    filter: grayscale(0%);
+    background-color: #e2e8f0;
 }
 
 .mapa-full iframe {
     width: 100%;
     height: 100%;
     border: 0;
+    /* Mapa normal (sem filtro cinza) para ficar bonito */
 }
 
+/* RESPONSIVIDADE */
 @media (max-width: 850px) {
+    .hero-contato { height: auto; padding: 100px 0 60px; }
+    .hero-content-center h1 { font-size: 2.5rem; }
+    
     .card-contato-wrapper {
         flex-direction: column;
     }
@@ -292,10 +313,11 @@ input:focus, select:focus, textarea:focus {
     }
     
     .painel-info, .painel-form {
-        padding: 40px 20px;
+        padding: 40px 25px;
     }
     
-    .hero-overlay-page h2 {
-        font-size: 2.8rem;
+    .secao-contato-premium {
+        margin-bottom: 0; /* Remove sobreposição no mobile */
+        padding-bottom: 60px;
     }
 }

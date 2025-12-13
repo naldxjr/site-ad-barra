@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contribua - AD Barra de Santa Rosa</title>
     
+    <link rel="icon" type="image/x-icon" href="img/LOGO-AD.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/global.css">
@@ -31,11 +33,11 @@
             <nav id="nav-principal">
                 <ul class="menu-lista">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="quem-somos.html" style="color: var(--cor-ouro);">Quem Somos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
                     <li><a href="ministerios.html">Ministérios</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="contato.html">Contato</a></li>
-                    <li><a href="contribua.html" class="btn-contato">Contribua</a></li>
+                    <li><a href="contribua.html" style="color: var(--cor-ouro);">Contribua</a></li>
                 </ul>
             </nav>
 
@@ -47,11 +49,16 @@
         </div>
     </header>
 
-    <section class="hero-page">
-        <div class="hero-overlay-page">
-            <span class="tag-topo">Dízimos e Ofertas</span>
-            <h2>Ato de Adoração</h2>
-            <p>"Cada um contribua segundo propôs no seu coração; não com tristeza, ou por necessidade; porque Deus ama ao que dá com alegria."</p>
+    <section class="hero-contribua">
+        <div class="hero-overlay-dark">
+            <div class="container">
+                <div class="hero-content-center">
+                    <span class="tag-hero-gold">Dízimos e Ofertas</span>
+                    <h1>Ato de Adoração<br>e Gratidão</h1>
+                    <div class="divider-hero"></div>
+                    <p>"Cada um contribua segundo propôs no seu coração; não com tristeza, ou por necessidade; porque Deus ama ao que dá com alegria."</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -60,58 +67,64 @@
             <div class="layout-doacao">
                 
                 <div class="coluna-pix">
-                    <div class="card-pix-master">
+                    <div class="card-pix-glass">
                         <div class="pix-header">
                             <i class="fa-brands fa-pix"></i>
                             <span>Transferência Instantânea</span>
                         </div>
+                        
                         <div class="pix-body">
                             <div class="qr-box">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code PIX">
                             </div>
+                            
                             <div class="chave-info">
                                 <span class="label">Chave CNPJ</span>
-                                <div class="input-fake">
-                                    <span id="texto-pix">00.000.000/0001-00</span>
-                                    <button id="btn-copiar-pix" title="Copiar Chave"><i class="fa-regular fa-copy"></i></button>
+                                <div class="input-copy-wrapper">
+                                    <input type="text" value="00.000.000/0001-00" id="chave-pix" readonly>
+                                    <button onclick="copiarChave()" id="btn-copiar" title="Copiar">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
                                 </div>
+                                <span id="msg-copiado" class="msg-feedback">Copiado!</span>
                             </div>
                         </div>
+
                         <div class="pix-footer">
-                            AD Barra de Santa Rosa - PB
+                            <span>Titular:</span> AD Barra de Santa Rosa
                         </div>
                     </div>
                 </div>
 
                 <div class="coluna-bancos">
                     <div class="header-bancos">
-                        <h3>Contas Bancárias</h3>
-                        <p>Opções para transferência TED/DOC</p>
+                        <h3>Transferência Bancária</h3>
+                        <p>Opções para DOC/TED de qualquer banco.</p>
                     </div>
 
                     <div class="lista-bancos">
                         <div class="item-banco">
-                            <div class="logo-banco">
+                            <div class="logo-banco-box">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_do_Brasil_logo.svg/2560px-Banco_do_Brasil_logo.svg.png" alt="BB">
                             </div>
                             <div class="dados-banco">
                                 <h4>Banco do Brasil</h4>
-                                <div class="info-conta">
-                                    <span>Ag: <strong>1234-X</strong></span>
-                                    <span>Cc: <strong>12345-6</strong></span>
+                                <div class="info-conta-grid">
+                                    <div>Agência: <strong>1234-X</strong></div>
+                                    <div>Conta: <strong>12345-6</strong></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="item-banco">
-                            <div class="logo-banco">
+                            <div class="logo-banco-box">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Logo_Bradesco_%282008%29.svg/2560px-Logo_Bradesco_%282008%29.svg.png" alt="Bradesco">
                             </div>
                             <div class="dados-banco">
                                 <h4>Bradesco</h4>
-                                <div class="info-conta">
-                                    <span>Ag: <strong>0001</strong></span>
-                                    <span>Cc: <strong>98765-4</strong></span>
+                                <div class="info-conta-grid">
+                                    <div>Agência: <strong>0001</strong></div>
+                                    <div>Conta: <strong>98765-4</strong></div>
                                 </div>
                             </div>
                         </div>
@@ -125,26 +138,34 @@
     <section class="secao-transparencia">
         <div class="container">
             <div class="cabecalho-transparencia">
-                <h2>Destino dos Recursos</h2>
+                <h2>Onde sua oferta é semeada?</h2>
                 <div class="linha-separadora"></div>
-                <p>Veja como sua fidelidade mantém a obra de Deus.</p>
+                <p>Veja como sua fidelidade mantém a obra de Deus em movimento.</p>
             </div>
 
             <div class="grid-impacto">
                 <div class="card-impacto">
-                    <div class="icon-impacto"><i class="fa-solid fa-church"></i></div>
-                    <h4>Manutenção</h4>
-                    <p>Zelo pelo templo, energia e estrutura.</p>
+                    <div class="icon-circle-impacto">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <h4>Manutenção do Templo</h4>
+                    <p>Zelo pela casa de Deus, estrutura, energia e melhorias para receber bem os irmãos.</p>
                 </div>
+                
                 <div class="card-impacto">
-                    <div class="icon-impacto"><i class="fa-solid fa-earth-americas"></i></div>
-                    <h4>Missões</h4>
-                    <p>Sustento missionário e evangelismo.</p>
+                    <div class="icon-circle-impacto">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h4>Missões e Evangelismo</h4>
+                    <p>Sustento de missionários e projetos que levam a Palavra aos que precisam.</p>
                 </div>
+                
                 <div class="card-impacto">
-                    <div class="icon-impacto"><i class="fa-solid fa-child-reaching"></i></div>
-                    <h4>Ensino</h4>
-                    <p>Material para EBD e Ministério Infantil.</p>
+                    <div class="icon-circle-impacto">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h4>Ação Social e Ensino</h4>
+                    <p>Material para EBD, apoio aos necessitados e investimento na próxima geração.</p>
                 </div>
             </div>
         </div>
@@ -153,35 +174,37 @@
     <footer class="rodape-simples">
         <div class="container">
             <div class="conteudo-central">
-                
                 <div class="marca-rodape">
                     <h3>AD Barra</h3>
                     <p>Barra de Santa Rosa - PB</p>
                 </div>
-
                 <div class="social-rodape">
                     <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-
                 <div class="divisor-rodape"></div>
-
                 <div class="creditos-rodape">
                     <span class="copy">&copy; 2025 AD Barra. Todos os direitos reservados.</span>
-                    <span class="dev">
-                        Desenvolvido por <a href="https://instagram.com/nalldojr" target="_blank">@nalldojr</a>
-                    </span>
+                    <span class="dev">Desenvolvido por <a href="https://instagram.com/nalldojr" target="_blank">@nalldojr</a></span>
                 </div>
-
             </div>
         </div>
     </footer>
     
-    <a href="https://wa.me/5583999999999" target="_blank" class="btn-whatsapp">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> Fale Conosco
-    </a>
     
+    <script>
+        function copiarChave() {
+            var copyText = document.getElementById("chave-pix");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); 
+            navigator.clipboard.writeText(copyText.value);
+            
+            var msg = document.getElementById("msg-copiado");
+            msg.style.opacity = "1";
+            setTimeout(function(){ msg.style.opacity = "0"; }, 2000);
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

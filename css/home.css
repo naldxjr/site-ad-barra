@@ -119,7 +119,7 @@
 /* Container da Imagem do Cartaz */
 .flyer-container {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: -30px 30px 60px rgba(0,0,0,0.5); /* Sombra forte para destacar */
     border: 1px solid rgba(255,255,255,0.1);
@@ -269,115 +269,165 @@
     transform: translateX(5px); /* Move para a direita */
 }
 
-.secao-cinema {
-    padding: 100px 20px;
-    background-color: #0b1120;
+/* --- SEÇÃO CINEMA (Gold & Brown Luxury - COMPACTA) --- */
+.secao-cinema-gold {
+    /* Padding reduzido de 100px para 60px */
+    padding: 60px 20px;
+    background: radial-gradient(circle at center, #4a3b2a 0%, #1e1611 100%);
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--cor-ouro);
+}
+
+.bg-pattern {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .cabecalho-cinema {
     max-width: 800px;
-    margin: 0 auto 50px;
+    /* Margem reduzida de 50px para 30px */
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 2;
 }
 
-.tag-live {
-    background-color: #e74c3c;
-    color: white;
-    padding: 6px 15px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 800;
+.tag-live-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: inline-block;
-    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
-    animation: pulsar 2s infinite;
+    margin-bottom: 15px;
+    color: var(--cor-ouro);
+}
+
+.pulsar-dot {
+    width: 8px; height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #e74c3c;
+    animation: pulsar 1.5s infinite;
 }
 
 @keyframes pulsar {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 .cabecalho-cinema h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
     font-family: var(--fonte-titulos);
+    /* Fonte reduzida de 3.5rem para 2.8rem */
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 .cabecalho-cinema p {
-    color: #94a3b8;
+    color: #d1c4b6;
     font-size: 1.1rem;
-    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 0;
 }
 
-.tela-cinema {
-    max-width: 900px;
-    margin: 0 auto 40px;
+.tela-cinema-pro {
+    /* Largura reduzida de 950px para 750px (Isso diminui a altura do player) */
+    max-width: 750px;
+    /* Margem reduzida */
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 2;
 }
 
-.moldura-video {
+.moldura-video-gold {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(198, 159, 110, 0.15), 0 30px 60px rgba(0,0,0,0.6);
+    border: 1px solid rgba(198, 159, 110, 0.3);
     background: black;
 }
 
-.moldura-video iframe {
+.moldura-video-gold iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
 }
 
 .botoes-cinema {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
 }
 
-.btn-youtube {
-    background-color: #ff0000;
-    color: white;
-    padding: 14px 30px;
+.btn-inscrever {
+    background-color: var(--cor-ouro);
+    color: #1e1611;
+    padding: 12px 30px; /* Botão um pouco menor */
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: 800;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: transform 0.3s;
 }
 
-.btn-share {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.3s;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.btn-youtube:hover, .btn-share:hover {
+.btn-inscrever:hover {
     transform: translateY(-3px);
-    filter: brightness(1.2);
+    box-shadow: 0 10px 20px rgba(198, 159, 110, 0.3);
+    background-color: #d4af7e;
 }
 
-.btn-share:hover {
-    background-color: rgba(255,255,255,0.2);
+.btn-compartilhar {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    font-size: 0.85rem;
+}
+
+.btn-compartilhar:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao-cinema-gold { padding: 60px 20px; }
+    
+    .cabecalho-cinema h2 { font-size: 2.2rem; }
+    
+    .botoes-cinema { flex-direction: column; align-items: center; }
+    
+    .btn-inscrever, .btn-compartilhar { width: 100%; justify-content: center; max-width: 300px; }
 }
 
 .secao-visita {
